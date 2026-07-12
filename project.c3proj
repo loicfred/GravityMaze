@@ -5,22 +5,44 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "21abntpl6uq",
 	"objectTypes": {
 		"items": [],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Lettering",
+					"MainMenuBackground",
+					"TitleName",
+					"Button"
+				],
+				"subfolders": [],
+				"name": "Menu"
+			}
+		]
 	},
 	"functionsName": "Functions",
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Menu"
+		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
-			"TitleMenu"
+			"MenuTitle",
+			"Level_1"
 		],
 		"subfolders": []
 	},
