@@ -45,7 +45,7 @@
 					"actions": [
 						{
 							"id": "request-permission",
-							"objectClass": "Touch",
+							"objectClass": "Control_Touch",
 							"sid": 358702896392666,
 							"parameters": {
 								"type": "orientation"
@@ -99,7 +99,7 @@
 									"objectClass": "System",
 									"sid": 183675827262862,
 									"parameters": {
-										"first-value": "abs(Touch.Beta)",
+										"first-value": "abs(Control_Touch.Beta)",
 										"comparison": 4,
 										"second-value": "Deadzone"
 									}
@@ -112,8 +112,8 @@
 									"sid": 310313790051125,
 									"behaviorType": "Physics",
 									"parameters": {
-										"force": "clamp((abs(Touch.Beta) - Deadzone) / (90 - Deadzone) * MaxForce, 0, MaxForce)",
-										"angle": "Touch.Alpha + 90",
+										"force": "clamp((abs(Control_Touch.Beta) - Deadzone) / (90 - Deadzone) * MaxForce, 0, MaxForce)",
+										"angle": "Control_Touch.Alpha + 90",
 										"image-point": "0"
 									}
 								}

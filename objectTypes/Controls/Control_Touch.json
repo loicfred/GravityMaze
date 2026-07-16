@@ -1,9 +1,9 @@
 {
-	"name": "Touch",
+	"name": "Control_Touch",
 	"plugin-id": "Touch",
 	"sid": 781028428945360,
 	"singleglobal-inst": {
-		"type": "Touch",
+		"type": "Control_Touch",
 		"properties": {
 			"use-mouse-input": true
 		},

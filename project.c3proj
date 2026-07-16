@@ -8,6 +8,41 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "BinaryData",
+			"name": "Binary Data",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
@@ -22,6 +57,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Share",
+			"name": "Share",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -29,8 +71,29 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -55,10 +118,7 @@
 			"wall",
 			"ball",
 			"pivot",
-			"Sprite",
-			"Touch",
-			"PlatformInfo",
-			"Mouse"
+			"Sprite"
 		],
 		"subfolders": [
 			{
@@ -66,10 +126,28 @@
 					"Lettering",
 					"MainMenuBackground",
 					"TitleName",
-					"Button"
+					"Button",
+					"Saving"
 				],
 				"subfolders": [],
 				"name": "Menu"
+			},
+			{
+				"items": [
+					"SnapshotData",
+					"Share",
+					"Localstorage",
+					"Control_Keyboard",
+					"Control_Gamepad",
+					"Control_Browser",
+					"Control_Audio",
+					"Control_Mouse",
+					"Control_Touch",
+					"PlatformInfo",
+					"Cursor"
+				],
+				"subfolders": [],
+				"name": "Controls"
 			}
 		]
 	},
@@ -78,7 +156,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"Menu"
+			"Menu",
+			"Buttons"
 		],
 		"subfolders": []
 	},
@@ -94,7 +173,8 @@
 			"Menu_Events",
 			"Event sheet 1",
 			"Event sheet 2",
-			"Event sheet 3"
+			"Event sheet 3",
+			"Splash_Event"
 		],
 		"subfolders": []
 	},
@@ -104,7 +184,16 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "sfx_button_hover.mp3",
+					"type": "audio/mpeg",
+					"sid": 672206935027495,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

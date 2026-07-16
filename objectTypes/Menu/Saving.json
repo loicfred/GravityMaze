@@ -1,0 +1,16 @@
+{
+	"name": "Saving",
+	"plugin-id": "Text",
+	"sid": 533387687079358,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 252331878266307
+		}
+	],
+	"effectTypes": []
+}

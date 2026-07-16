@@ -45,7 +45,7 @@
 					"actions": [
 						{
 							"id": "request-permission",
-							"objectClass": "Touch",
+							"objectClass": "Control_Touch",
 							"sid": 544575407054659,
 							"parameters": {
 								"type": "orientation"
@@ -106,8 +106,8 @@
 									"sid": 797693362056091,
 									"behaviorType": "Physics",
 									"parameters": {
-										"force": "clamp((abs(Touch.Gamma) - Deadzone) / (90 - Deadzone) * MaxForce, 0, MaxForce)",
-										"angle": "Touch.Gamma > 0 ? 0 : 180",
+										"force": "clamp((abs(Control_Touch.Gamma) - Deadzone) / (90 - Deadzone) * MaxForce, 0, MaxForce)",
+										"angle": "Control_Touch.Gamma > 0 ? 0 : 180",
 										"image-point": "0"
 									}
 								}
@@ -130,7 +130,7 @@
 									"sid": 482843190428835,
 									"behaviorType": "Physics",
 									"parameters": {
-										"force": "clamp((abs(Touch.Gamma) - 90) / (90) * MaxForce, 0, MaxForce)",
+										"force": "clamp((abs(Control_Touch.Gamma) - 90) / (90) * MaxForce, 0, MaxForce)",
 										"angle": "270",
 										"image-point": "0"
 									}
@@ -141,7 +141,7 @@
 									"sid": 197838737747763,
 									"behaviorType": "Physics",
 									"parameters": {
-										"force": "clamp((abs(Touch.Gamma) - 90) / (90) * MaxForce, 0, MaxForce)",
+										"force": "clamp((abs(Control_Touch.Gamma) - 90) / (90) * MaxForce, 0, MaxForce)",
 										"angle": "90",
 										"image-point": "0"
 									}

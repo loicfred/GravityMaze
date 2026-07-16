@@ -1,0 +1,12 @@
+{
+	"name": "Control_Keyboard",
+	"plugin-id": "Keyboard",
+	"sid": 133089747032312,
+	"singleglobal-inst": {
+		"type": "Control_Keyboard",
+		"properties": {},
+		"uid": 39,
+		"sid": 964837112527510,
+		"tags": ""
+	}
+}

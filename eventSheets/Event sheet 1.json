@@ -46,7 +46,7 @@
 					"conditions": [
 						{
 							"id": "mouse-button-is-down",
-							"objectClass": "Mouse",
+							"objectClass": "Control_Mouse",
 							"sid": 298864203091780,
 							"parameters": {
 								"mouse-button": "right"
@@ -70,7 +70,7 @@
 					"conditions": [
 						{
 							"id": "mouse-button-is-down",
-							"objectClass": "Mouse",
+							"objectClass": "Control_Mouse",
 							"sid": 320931510989471,
 							"parameters": {
 								"mouse-button": "left"
@@ -108,7 +108,7 @@
 					"conditions": [
 						{
 							"id": "on-touched-object",
-							"objectClass": "Touch",
+							"objectClass": "Control_Touch",
 							"sid": 700639007529280,
 							"parameters": {
 								"object": "Sprite",
@@ -119,7 +119,7 @@
 					"actions": [
 						{
 							"id": "request-permission",
-							"objectClass": "Touch",
+							"objectClass": "Control_Touch",
 							"sid": 418974347984794,
 							"parameters": {
 								"type": "orientation"
@@ -156,7 +156,7 @@
 							"conditions": [
 								{
 									"id": "compare-orientation",
-									"objectClass": "Touch",
+									"objectClass": "Control_Touch",
 									"sid": 131187870924489,
 									"parameters": {
 										"orientation": "gamma",
@@ -173,7 +173,7 @@
 									"behaviorType": "Physics",
 									"parameters": {
 										"force": "200",
-										"angle": "Touch.Gamma",
+										"angle": "Control_Touch.Gamma",
 										"image-point": "0"
 									}
 								}

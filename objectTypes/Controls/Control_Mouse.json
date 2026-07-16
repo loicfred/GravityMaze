@@ -1,9 +1,9 @@
 {
-	"name": "Mouse",
+	"name": "Control_Mouse",
 	"plugin-id": "Mouse",
 	"sid": 156642635421156,
 	"singleglobal-inst": {
-		"type": "Mouse",
+		"type": "Control_Mouse",
 		"properties": {},
 		"uid": 35,
 		"sid": 171343979858882,

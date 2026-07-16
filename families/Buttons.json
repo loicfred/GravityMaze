@@ -1,0 +1,19 @@
+{
+	"name": "Buttons",
+	"plugin-id": "Sprite",
+	"sid": 621337534915998,
+	"instanceVariables": [
+		{
+			"name": "Action",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 623740231994970
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Button"
+	]
+}

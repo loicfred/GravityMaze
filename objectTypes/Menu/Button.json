@@ -4,15 +4,7 @@
 	"sid": 150849426755889,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [
-		{
-			"name": "Action",
-			"type": "string",
-			"desc": "",
-			"show": true,
-			"sid": 466077710426350
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -22,8 +14,8 @@
 					{
 						"width": 363,
 						"height": 116,
-						"originX": 0.522038567493113,
-						"originY": 0.5172413793103449,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -36,8 +28,8 @@
 					{
 						"width": 364,
 						"height": 117,
-						"originX": 0.5806920352374898,
-						"originY": 0.38137341585617457,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,

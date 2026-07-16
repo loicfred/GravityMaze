@@ -1,0 +1,12 @@
+{
+	"name": "Control_Browser",
+	"plugin-id": "Browser",
+	"sid": 971086356921321,
+	"singleglobal-inst": {
+		"type": "Control_Browser",
+		"properties": {},
+		"uid": 41,
+		"sid": 525200617142935,
+		"tags": ""
+	}
+}
