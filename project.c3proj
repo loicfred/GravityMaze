@@ -1,22 +1,65 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 48703,
-	"name": "BikeBalanceChallenge",
+	"name": "Gravity Maze",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
 			"author": "Scirra",
 			"bundled": false
 		}
 	],
 	"uniqueId": "21abntpl6uq",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"wall",
+			"ball",
+			"pivot",
+			"Sprite",
+			"Touch",
+			"PlatformInfo",
+			"Mouse"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -48,7 +91,10 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Menu_Events"
+			"Menu_Events",
+			"Event sheet 1",
+			"Event sheet 2",
+			"Event sheet 3"
 		],
 		"subfolders": []
 	},

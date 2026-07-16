@@ -1,0 +1,189 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-windows",
+					"objectClass": "PlatformInfo",
+					"sid": 856789415987194
+				}
+			],
+			"actions": [],
+			"sid": 384172297929111,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 400513276071735
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "wall",
+							"sid": 411869097713000,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "pivot",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 215511357417969
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "mouse-button-is-down",
+							"objectClass": "Mouse",
+							"sid": 298864203091780,
+							"parameters": {
+								"mouse-button": "right"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "pivot",
+							"sid": 916464675719161,
+							"parameters": {
+								"angle": "pivot.Angle +2"
+							}
+						}
+					],
+					"sid": 826787906458900
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "mouse-button-is-down",
+							"objectClass": "Mouse",
+							"sid": 320931510989471,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "pivot",
+							"sid": 879811187604215,
+							"parameters": {
+								"angle": "pivot.Angle -2"
+							}
+						}
+					],
+					"sid": 833771564739304
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-android",
+					"objectClass": "PlatformInfo",
+					"sid": 658046872938993
+				}
+			],
+			"actions": [],
+			"sid": 282801843022051,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-touched-object",
+							"objectClass": "Touch",
+							"sid": 700639007529280,
+							"parameters": {
+								"object": "Sprite",
+								"type": "end"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-permission",
+							"objectClass": "Touch",
+							"sid": 418974347984794,
+							"parameters": {
+								"type": "orientation"
+							}
+						}
+					],
+					"sid": 170739699647128
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 776135329253786
+						}
+					],
+					"actions": [
+						{
+							"id": "set-world-gravity",
+							"objectClass": "ball",
+							"sid": 367124898671958,
+							"disabled": true,
+							"behaviorType": "Physics",
+							"parameters": {
+								"gravity": "1000"
+							}
+						}
+					],
+					"sid": 254589563934935,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-orientation",
+									"objectClass": "Touch",
+									"sid": 131187870924489,
+									"parameters": {
+										"orientation": "gamma",
+										"comparison": 4,
+										"angle": "Deadzone"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-force-at-angle",
+									"objectClass": "ball",
+									"sid": 981880770361913,
+									"behaviorType": "Physics",
+									"parameters": {
+										"force": "200",
+										"angle": "Touch.Gamma",
+										"image-point": "0"
+									}
+								}
+							],
+							"sid": 205675783027963
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 596354634657862
+}

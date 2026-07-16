@@ -1,0 +1,129 @@
+{
+	"name": "Event sheet 3",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Deadzone2",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 205697284442034
+		},
+		{
+			"eventType": "variable",
+			"name": "MaxForce2",
+			"type": "number",
+			"initialValue": "200",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 460915974224002
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-android",
+					"objectClass": "PlatformInfo",
+					"sid": 237334719334918
+				}
+			],
+			"actions": [],
+			"sid": 921244730981054,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 890713255164171
+						}
+					],
+					"actions": [
+						{
+							"id": "request-permission",
+							"objectClass": "Touch",
+							"sid": 358702896392666,
+							"parameters": {
+								"type": "orientation"
+							}
+						}
+					],
+					"sid": 783583627717151
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-android",
+					"objectClass": "PlatformInfo",
+					"sid": 486393918786707
+				}
+			],
+			"actions": [],
+			"sid": 605489577627859,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 442009755853479
+						}
+					],
+					"actions": [
+						{
+							"id": "set-linear-damping",
+							"objectClass": "ball",
+							"sid": 941480829237881,
+							"disabled": true,
+							"behaviorType": "Physics",
+							"parameters": {
+								"linear-damping": "0.97"
+							}
+						}
+					],
+					"sid": 465366497561939,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 183675827262862,
+									"parameters": {
+										"first-value": "abs(Touch.Beta)",
+										"comparison": 4,
+										"second-value": "Deadzone"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-force-at-angle",
+									"objectClass": "ball",
+									"sid": 310313790051125,
+									"behaviorType": "Physics",
+									"parameters": {
+										"force": "clamp((abs(Touch.Beta) - Deadzone) / (90 - Deadzone) * MaxForce, 0, MaxForce)",
+										"angle": "Touch.Alpha + 90",
+										"image-point": "0"
+									}
+								}
+							],
+							"sid": 229445815555278
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 454709702827768
+}

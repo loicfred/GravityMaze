@@ -11,5 +11,50 @@
 			"layout": []
 		}
 	},
-	"instanceFolderItemsJson": []
+	"instanceFolderItemsJson": [
+		{
+			"sid": 594717283167525,
+			"expanded": true
+		},
+		{
+			"sid": 582741606921355,
+			"expanded": true
+		},
+		{
+			"sid": 572582763554033,
+			"expanded": true
+		},
+		{
+			"sid": 654228412611701,
+			"expanded": true
+		},
+		{
+			"sid": 343599705172850,
+			"expanded": true
+		},
+		{
+			"sid": 863287000859102,
+			"expanded": true
+		},
+		{
+			"sid": 467620447292487,
+			"expanded": true
+		},
+		{
+			"sid": 591783869820644,
+			"expanded": true
+		},
+		{
+			"sid": 812176808693608,
+			"expanded": true
+		},
+		{
+			"sid": 421321898942334,
+			"expanded": true
+		},
+		{
+			"sid": 755033182945723,
+			"expanded": true
+		}
+	]
 }
