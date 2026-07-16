@@ -1,0 +1,303 @@
+{
+	"name": "Event sheet 4",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "SensorReady",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 915888221445220
+		},
+		{
+			"eventType": "variable",
+			"name": "NeutralTilt",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 342778698094796
+		},
+		{
+			"eventType": "variable",
+			"name": "NeutralVertical",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 712030141917969
+		},
+		{
+			"eventType": "variable",
+			"name": "CanTiltHop",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 290898578372293
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 851690134263120
+				}
+			],
+			"actions": [
+				{
+					"id": "create-revolute-joint",
+					"objectClass": "RotatingBar",
+					"sid": 710500648978534,
+					"behaviorType": "Physics",
+					"parameters": {
+						"this-image-point": "0",
+						"object": "RotatingBarPivot"
+					}
+				}
+			],
+			"sid": 842959768611793
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 139149077306589
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angular-velocity",
+					"objectClass": "RotatingBar",
+					"sid": 981534783560278,
+					"behaviorType": "Physics",
+					"parameters": {
+						"angular-velocity": "90"
+					}
+				}
+			],
+			"sid": 200818958483734
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Control_Touch",
+					"sid": 318677860368600
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 380138707593163,
+					"parameters": {
+						"variable": "SensorReady"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "request-permission",
+					"objectClass": "Control_Touch",
+					"sid": 806850088999975,
+					"parameters": {
+						"type": "motion"
+					}
+				}
+			],
+			"sid": 715498083792216
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-permission-granted",
+					"objectClass": "Control_Touch",
+					"sid": 736364526980368,
+					"parameters": {
+						"type": "motion"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 296024041957859,
+					"parameters": {
+						"variable": "SensorReady",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 204963876801804,
+					"parameters": {
+						"seconds": "0.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 762813977641977,
+					"parameters": {
+						"variable": "NeutralTilt",
+						"value": "Control_Touch.AccelerationYWithG"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 211226025184419,
+					"parameters": {
+						"variable": "NeutralVertical",
+						"value": "Control_Touch.AccelerationXWithG"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 269998319238875,
+					"parameters": {
+						"variable": "SensorReady",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 913525102334338
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 129502146215983
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 891004320033415,
+					"parameters": {
+						"variable": "SensorReady"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "PlayerBall",
+					"sid": 874436071129378,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "clamp(sign(Control_Touch.AccelerationYWithG-NeutralTilt) * max(abs(Control_Touch.AccelerationYWithG-NeutralTilt)-0.35, 0) * 5, -45, 45)",
+						"force-y": "0",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 273052531501937
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 243380491195410,
+					"parameters": {
+						"variable": "SensorReady"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 353774336135827,
+					"parameters": {
+						"variable": "CanTiltHop"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 637617660258403,
+					"parameters": {
+						"first-value": "Control_Touch.AccelerationXWithG - NeutralVertical",
+						"comparison": 4,
+						"second-value": "1.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-impulse",
+					"objectClass": "PlayerBall",
+					"sid": 753137057006997,
+					"behaviorType": "Physics",
+					"parameters": {
+						"impulse-x": "0",
+						"implulse-y": "-3.5",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 116764208053863,
+					"parameters": {
+						"variable": "CanTiltHop",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 279505446058579
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 248890319434672,
+					"parameters": {
+						"variable": "SensorReady"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 527365730975845,
+					"parameters": {
+						"first-value": "abs(Control_Touch.AccelerationXWithG - NeutralVertical)",
+						"comparison": 2,
+						"second-value": "0.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 200080561845818,
+					"parameters": {
+						"variable": "CanTiltHop",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 571274918727816
+		}
+	],
+	"sid": 257242191299254
+}

@@ -118,7 +118,21 @@
 			"wall",
 			"ball",
 			"pivot",
-			"Sprite"
+			"Sprite",
+			"LevelBackground",
+			"WallShort",
+			"WallLong",
+			"PlayerBall",
+			"WallSquare",
+			"CrackedBlock",
+			"Pillar",
+			"WallCorner",
+			"RaisedPlatform",
+			"GoalHole",
+			"RotatingBar",
+			"Bumper",
+			"SpikeTrap",
+			"RotatingBarPivot"
 		],
 		"subfolders": [
 			{
@@ -164,7 +178,8 @@
 	"layouts": {
 		"items": [
 			"MenuTitle",
-			"Level_1"
+			"Level_1",
+			"Level_2"
 		],
 		"subfolders": []
 	},
@@ -174,7 +189,8 @@
 			"Event sheet 1",
 			"Event sheet 2",
 			"Event sheet 3",
-			"Splash_Event"
+			"Splash_Event",
+			"Event sheet 4"
 		],
 		"subfolders": []
 	},
