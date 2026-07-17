@@ -42,12 +42,42 @@
 			"sid": 290898578372293
 		},
 		{
+			"eventType": "variable",
+			"name": "LevelWon",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 964578025368253
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 851690134263120
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "RotatingBar",
+					"sid": 265259099852482,
+					"parameters": {
+						"instance-variable": "PairID",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "RotatingBarPivot",
+					"sid": 303002694750247,
+					"parameters": {
+						"instance-variable": "PairID",
+						"comparison": 0,
+						"value": "1"
+					}
 				}
 			],
 			"actions": [
@@ -63,6 +93,49 @@
 				}
 			],
 			"sid": 842959768611793
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 142008633174128
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "RotatingBar",
+					"sid": 213202769197129,
+					"parameters": {
+						"instance-variable": "PairID",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "RotatingBarPivot",
+					"sid": 471216123447206,
+					"parameters": {
+						"instance-variable": "PairID",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-revolute-joint",
+					"objectClass": "RotatingBar",
+					"sid": 798592314246460,
+					"behaviorType": "Physics",
+					"parameters": {
+						"this-image-point": "0",
+						"object": "RotatingBarPivot"
+					}
+				}
+			],
+			"sid": 748501504201188
 		},
 		{
 			"eventType": "block",
@@ -106,6 +179,23 @@
 			],
 			"actions": [
 				{
+					"id": "request-fullscreen",
+					"objectClass": "Control_Browser",
+					"sid": 357323861741532,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "auto"
+					}
+				},
+				{
+					"id": "lock-orientation",
+					"objectClass": "Control_Browser",
+					"sid": 981538549290501,
+					"parameters": {
+						"orientation": "landscape"
+					}
+				},
+				{
 					"id": "request-permission",
 					"objectClass": "Control_Touch",
 					"sid": 806850088999975,
@@ -141,9 +231,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 204963876801804,
+					"sid": 751003537580972,
 					"parameters": {
-						"seconds": "0.5",
+						"seconds": "1.0",
 						"use-timescale": true
 					}
 				},
@@ -192,16 +282,25 @@
 					"parameters": {
 						"variable": "SensorReady"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 568146451426476,
+					"parameters": {
+						"variable": "LevelWon"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
 					"id": "apply-force",
 					"objectClass": "PlayerBall",
-					"sid": 874436071129378,
+					"sid": 253719655945982,
 					"behaviorType": "Physics",
 					"parameters": {
-						"force-x": "clamp(sign(Control_Touch.AccelerationYWithG-NeutralTilt) * max(abs(Control_Touch.AccelerationYWithG-NeutralTilt)-0.35, 0) * 5, -45, 45)",
+						"force-x": "clamp(sign(Control_Touch.AccelerationYWithG-NeutralTilt) * max(abs(Control_Touch.AccelerationYWithG-NeutralTilt)-0.75, 0) * 3, -30, 30)",
 						"force-y": "0",
 						"image-point": "0"
 					}
@@ -237,6 +336,15 @@
 						"comparison": 4,
 						"second-value": "1.5"
 					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 789211722925913,
+					"parameters": {
+						"variable": "LevelWon"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -297,6 +405,86 @@
 				}
 			],
 			"sid": 571274918727816
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 655728176081140,
+					"parameters": {
+						"first-value": "LevelWon",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 748590020764954,
+					"parameters": {
+						"first-value": "distance(PlayerBall.X, PlayerBall.Y, GoalHole.X, GoalHole.Y)",
+						"comparison": 2,
+						"second-value": "40"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 351020665551152,
+					"parameters": {
+						"variable": "LevelWon",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PlayerBall",
+					"sid": 833727939175404,
+					"behaviorType": "Physics",
+					"parameters": {
+						"mode": "disabled"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PlayerBall",
+					"sid": 411506030723941,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 660864397696213
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 175745794189179,
+					"parameters": {
+						"first-value": "LevelWon",
+						"comparison": 0,
+						"second-value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "WinText",
+					"sid": 527619751999837,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 594462720255328
 		}
 	],
 	"sid": 257242191299254

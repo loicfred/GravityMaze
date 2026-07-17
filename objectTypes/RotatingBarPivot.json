@@ -4,7 +4,15 @@
 	"sid": 910117347461411,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "PairID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 523854941717462
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Physics",
