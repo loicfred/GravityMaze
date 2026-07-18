@@ -1,0 +1,126 @@
+{
+	"name": "Event sheet 5",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "AccelX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 984610787292907
+		},
+		{
+			"eventType": "variable",
+			"name": "AccelY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 705449020175052
+		},
+		{
+			"eventType": "variable",
+			"name": "AccelZ",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 740701950812822
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 686522701309539
+				}
+			],
+			"actions": [
+				{
+					"id": "set-world-gravity",
+					"objectClass": "PlayerBall",
+					"sid": 188592337733409,
+					"behaviorType": "Physics",
+					"parameters": {
+						"gravity": "0"
+					}
+				}
+			],
+			"sid": 531941185397033
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 251384885889828
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "PlayerBall",
+					"sid": 580836438190686,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "AccelY * 0.75",
+						"force-y": "AccelX * 0.75",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "AccelX",
+					"sid": 996532387316295,
+					"parameters": {
+						"text": "\"AccelX: \" & AccelX & \" - AccelY: \" & AccelY & \" - AccelZ: \" & AccelZ"
+					}
+				}
+			],
+			"sid": 717881217723350
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap",
+					"objectClass": "Control_Touch",
+					"sid": 192465232491740
+				},
+				{
+					"id": "is-fullscreen",
+					"objectClass": "Control_Browser",
+					"sid": 205964750623538,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Control_Browser",
+					"sid": 901431831419785,
+					"parameters": {
+						"mode": "centered",
+						"navigation-ui": "auto"
+					}
+				},
+				{
+					"id": "lock-orientation",
+					"objectClass": "Control_Browser",
+					"sid": 680843132290836,
+					"parameters": {
+						"orientation": "landscape"
+					}
+				}
+			],
+			"sid": 695357931977924
+		}
+	],
+	"sid": 156051230596773
+}
