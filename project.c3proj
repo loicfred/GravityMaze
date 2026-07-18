@@ -116,7 +116,7 @@
 	"objectTypes": {
 		"items": [
 			"wall",
-			"ball",
+			"OldBall",
 			"pivot",
 			"Sprite",
 			"LevelBackground",
@@ -124,17 +124,14 @@
 			"WallLong",
 			"PlayerBall",
 			"WallSquare",
-			"CrackedBlock",
-			"Pillar",
 			"WallCorner",
 			"RaisedPlatform",
 			"GoalHole",
 			"RotatingBar",
-			"Bumper",
-			"SpikeTrap",
 			"RotatingBarPivot",
-			"AccelX",
-			"AccelY"
+			"Outerwall",
+			"MazeWallFlat",
+			"WinText"
 		],
 		"subfolders": [
 			{
@@ -181,7 +178,8 @@
 		"items": [
 			"MenuTitle",
 			"Level_1",
-			"Level_2"
+			"Level_2",
+			"Level_2(old)"
 		],
 		"subfolders": []
 	},
@@ -193,7 +191,7 @@
 			"Event sheet 3",
 			"Splash_Event",
 			"Event sheet 4",
-			"Event sheet 5"
+			"Level_Events"
 		],
 		"subfolders": []
 	},
@@ -203,7 +201,7 @@
 				{
 					"name": "main.js",
 					"type": "application/javascript",
-					"sid": 914639002995720,
+					"sid": 429601029945560,
 					"script-info": {
 						"purpose": "main"
 					}

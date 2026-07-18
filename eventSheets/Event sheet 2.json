@@ -80,7 +80,7 @@
 					"actions": [
 						{
 							"id": "set-linear-damping",
-							"objectClass": "ball",
+							"objectClass": "OldBall",
 							"sid": 258756790514894,
 							"behaviorType": "Physics",
 							"parameters": {
@@ -102,7 +102,7 @@
 							"actions": [
 								{
 									"id": "apply-force-at-angle",
-									"objectClass": "ball",
+									"objectClass": "OldBall",
 									"sid": 797693362056091,
 									"behaviorType": "Physics",
 									"parameters": {
@@ -126,7 +126,7 @@
 							"actions": [
 								{
 									"id": "apply-force-at-angle",
-									"objectClass": "ball",
+									"objectClass": "OldBall",
 									"sid": 482843190428835,
 									"behaviorType": "Physics",
 									"parameters": {
@@ -137,7 +137,7 @@
 								},
 								{
 									"id": "apply-force-at-angle",
-									"objectClass": "ball",
+									"objectClass": "OldBall",
 									"sid": 197838737747763,
 									"behaviorType": "Physics",
 									"parameters": {

@@ -140,7 +140,7 @@
 					"actions": [
 						{
 							"id": "set-world-gravity",
-							"objectClass": "ball",
+							"objectClass": "OldBall",
 							"sid": 367124898671958,
 							"disabled": true,
 							"behaviorType": "Physics",
@@ -168,7 +168,7 @@
 							"actions": [
 								{
 									"id": "apply-force-at-angle",
-									"objectClass": "ball",
+									"objectClass": "OldBall",
 									"sid": 981880770361913,
 									"behaviorType": "Physics",
 									"parameters": {

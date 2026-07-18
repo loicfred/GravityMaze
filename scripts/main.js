@@ -3,16 +3,15 @@
 // import * as myModule from "./mymodule.js";
 
 runOnStartup(async runtime => {
-    if (typeof DeviceMotionEvent !== "undefined" &&
-        typeof DeviceMotionEvent.requestPermission === "function") {
-        await DeviceMotionEvent.requestPermission();
-    }
+	if (typeof DeviceMotionEvent !== "undefined" && typeof DeviceMotionEvent.requestPermission === "function") {
+		await DeviceMotionEvent.requestPermission();
+	}
 
-    window.addEventListener("devicemotion", (e) => {
-        runtime.globalVars.AccelX = e.accelerationIncludingGravity.x || 0;
-        runtime.globalVars.AccelY = e.accelerationIncludingGravity.y || 0;
-        runtime.globalVars.AccelZ = e.accelerationIncludingGravity.z || 0;
-    });
+	window.addEventListener("devicemotion", (e) => {
+		runtime.globalVars.AccelX = e.accelerationIncludingGravity.x || 0;
+		runtime.globalVars.AccelY = e.accelerationIncludingGravity.y || 0;
+		runtime.globalVars.AccelZ = e.accelerationIncludingGravity.z || 0;
+	})
 });
 
 async function OnBeforeProjectStart(runtime)

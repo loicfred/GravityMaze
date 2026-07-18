@@ -540,12 +540,12 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
-						"initial-frame": 1,
+						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 30,
-					"sid": 858206668974765,
+					"uid": 45,
+					"sid": 724342901620667,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
@@ -569,10 +569,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 576,
-						"y": 102,
-						"width": 22.46808510638298,
-						"height": 22,
+						"x": 533,
+						"y": 83,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -581,7 +581,7 @@
 							1,
 							1
 						],
-						"z": 0,
+						"z": 1,
 						"angle": 0
 					}
 				}
@@ -627,5 +627,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 5"
+	"eventSheet": "Level_Events"
 }

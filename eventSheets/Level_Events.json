@@ -1,0 +1,195 @@
+{
+	"name": "Level_Events",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "AccelX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 364234267773735
+		},
+		{
+			"eventType": "variable",
+			"name": "AccelY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 205151074337252
+		},
+		{
+			"eventType": "variable",
+			"name": "AccelZ",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 557451222211441
+		},
+		{
+			"eventType": "variable",
+			"name": "LevelComplete",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 557156144146867
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 850377565929811
+				}
+			],
+			"actions": [
+				{
+					"id": "set-world-gravity",
+					"objectClass": "PlayerBall",
+					"sid": 867304471265955,
+					"behaviorType": "Physics",
+					"parameters": {
+						"gravity": "0"
+					}
+				}
+			],
+			"sid": 566649244692645
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Control_Touch",
+					"sid": 796893235000007
+				},
+				{
+					"id": "is-fullscreen",
+					"objectClass": "Control_Browser",
+					"sid": 245192283934118,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Control_Browser",
+					"sid": 211058180089521,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "auto"
+					}
+				},
+				{
+					"id": "lock-orientation",
+					"objectClass": "Control_Browser",
+					"sid": 440697750274296,
+					"parameters": {
+						"orientation": "landscape"
+					}
+				},
+				{
+					"id": "request-permission",
+					"objectClass": "Control_Touch",
+					"sid": 210343664444949,
+					"parameters": {
+						"type": "motion"
+					}
+				}
+			],
+			"sid": 647525247061800
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 569424578363453,
+					"parameters": {
+						"variable": "LevelComplete"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 753147830758499,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 691080332695261
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-force",
+							"objectClass": "PlayerBall",
+							"sid": 702142451263487,
+							"behaviorType": "Physics",
+							"parameters": {
+								"force-x": "AccelY * 0.75",
+								"force-y": "AccelX * 0.75",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 668508507397138
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerBall",
+							"sid": 269837555329272,
+							"parameters": {
+								"object": "GoalHole"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 101044527959859,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 904645876741952,
+							"parameters": {
+								"variable": "LevelComplete",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "WinText",
+							"sid": 410949652260498,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 952230526781132
+				}
+			]
+		}
+	],
+	"sid": 923879032612480
+}
