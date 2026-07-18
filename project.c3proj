@@ -124,14 +124,17 @@
 			"WallLong",
 			"PlayerBall",
 			"WallSquare",
+			"CrackedBlock",
+			"Pillar",
 			"WallCorner",
 			"RaisedPlatform",
 			"GoalHole",
 			"RotatingBar",
+			"Bumper",
+			"SpikeTrap",
 			"RotatingBarPivot",
-			"Outerwall",
-			"MazeWallFlat",
-			"WinText"
+			"AccelX",
+			"AccelY"
 		],
 		"subfolders": [
 			{
@@ -178,8 +181,7 @@
 		"items": [
 			"MenuTitle",
 			"Level_1",
-			"Level_2",
-			"Level_2(old)"
+			"Level_2"
 		],
 		"subfolders": []
 	},
@@ -190,13 +192,23 @@
 			"Event sheet 2",
 			"Event sheet 3",
 			"Splash_Event",
-			"Event sheet 4"
+			"Event sheet 4",
+			"Event sheet 5"
 		],
 		"subfolders": []
 	},
 	"rootFileFolders": {
 		"script": {
-			"items": [],
+			"items": [
+				{
+					"name": "main.js",
+					"type": "application/javascript",
+					"sid": 914639002995720,
+					"script-info": {
+						"purpose": "main"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"sound": {
