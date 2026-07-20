@@ -43,6 +43,41 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5116279069767442,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1577867,
+						"collisionPoly": {
+							"points": [
+								0.6200361670647745,
+								0.4212240044559753,
+								0.518655201030332,
+								0.6114212058129763,
+								0.452229747047456,
+								0.41834058186837597
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 822029950383749,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
 			}
 		],
 		"subfolders": []

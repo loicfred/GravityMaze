@@ -105,17 +105,7 @@
 			"children": [
 				{
 					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-touched-object",
-							"objectClass": "Control_Touch",
-							"sid": 700639007529280,
-							"parameters": {
-								"object": "Sprite",
-								"type": "end"
-							}
-						}
-					],
+					"conditions": [],
 					"actions": [
 						{
 							"id": "request-permission",
