@@ -59,6 +59,15 @@
 					"parameters": {
 						"gravity": "0"
 					}
+				},
+				{
+					"id": "create-interstitial",
+					"objectClass": "MobileAdvert",
+					"sid": 791736778708169,
+					"parameters": {
+						"advert-id": "\"ca-app-pub-4929234972492255/1607562841\"",
+						"show": "false"
+					}
 				}
 			],
 			"sid": 566649244692645
@@ -184,6 +193,11 @@
 							"parameters": {
 								"visibility": "visible"
 							}
+						},
+						{
+							"id": "show-interstitial",
+							"objectClass": "MobileAdvert",
+							"sid": 506691104842667
 						}
 					],
 					"sid": 952230526781132

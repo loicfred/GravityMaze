@@ -92,6 +92,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "advert",
+			"name": "Mobile advert",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "gamepad",
 			"name": "Gamepad",
 			"author": "Scirra",
@@ -140,7 +147,10 @@
 			"WinText",
 			"Tilemap",
 			"BackgroundL1",
-			"Tilemap2"
+			"Tilemap1",
+			"MobileAdvert",
+			"Sprite",
+			"Tilemap3"
 		],
 		"subfolders": [
 			{
@@ -188,7 +198,8 @@
 			"MenuTitle",
 			"Level_1",
 			"Level_2",
-			"Level_2(old)"
+			"Level_2(old)",
+			"Level 3"
 		],
 		"subfolders": []
 	},
