@@ -42,6 +42,16 @@
 			"sid": 557156144146867
 		},
 		{
+			"eventType": "variable",
+			"name": "Timer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 238661597311439
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -67,6 +77,15 @@
 					"parameters": {
 						"advert-id": "\"ca-app-pub-4929234972492255/1607562841\"",
 						"show": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 199755580610600,
+					"parameters": {
+						"variable": "Timer",
+						"value": "0"
 					}
 				}
 			],
@@ -151,6 +170,23 @@
 								"force-x": "AccelY * 0.75",
 								"force-y": "AccelX * 0.75",
 								"image-point": "0"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 873767676744530,
+							"parameters": {
+								"variable": "Timer",
+								"value": "dt"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TimerText",
+							"sid": 625896339002236,
+							"parameters": {
+								"text": "zeropad(int(timer/60%60), 2) & \":\" & zeropad(int(timer%60), 2)"
 							}
 						}
 					],

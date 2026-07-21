@@ -150,7 +150,8 @@
 			"Tilemap1",
 			"MobileAdvert",
 			"Sprite",
-			"Tilemap3"
+			"Tilemap3",
+			"TimerText"
 		],
 		"subfolders": [
 			{
