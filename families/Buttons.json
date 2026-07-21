@@ -14,6 +14,7 @@
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
-		"Button"
+		"Button",
+		"SquareButton"
 	]
 }

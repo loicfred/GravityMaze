@@ -11,7 +11,7 @@
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "BackgroundL1",
+							"type": "Background_Level1",
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Animation 1",

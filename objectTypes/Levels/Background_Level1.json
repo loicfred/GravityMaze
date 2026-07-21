@@ -1,7 +1,7 @@
 {
-	"name": "Sprite",
+	"name": "Background_Level1",
 	"plugin-id": "Sprite",
-	"sid": 752092027737197,
+	"sid": 962333982713002,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 1672,
-						"height": 941,
+						"width": 250,
+						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9368175,
+						"imageSpriteId": 5159650,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 935788688238163,
+				"sid": 167322918104393,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1,5 +1,94 @@
 {
 	"name": "Splash_Event",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 995226188537145
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "LoadSave",
+					"sid": 983003864495131
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 962639781283426,
+					"parameters": {
+						"seconds": "4",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "get-item",
+					"objectClass": "Localstorage",
+					"sid": 924977601294120,
+					"parameters": {
+						"key": "\"StoryIntroChecked\""
+					}
+				}
+			],
+			"sid": 604147275720543
+		},
+		{
+			"functionName": "LoadSave",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "Localstorage",
+					"sid": 567879582925121,
+					"parameters": {
+						"key": "\"Sensitivity\""
+					}
+				},
+				{
+					"id": "get-item",
+					"objectClass": "Localstorage",
+					"sid": 990003430415524,
+					"parameters": {
+						"key": "\"Volume\""
+					}
+				},
+				{
+					"id": "get-item",
+					"objectClass": "Localstorage",
+					"sid": 461115517072194,
+					"parameters": {
+						"key": "\"Level1Complete\""
+					}
+				},
+				{
+					"id": "get-item",
+					"objectClass": "Localstorage",
+					"sid": 986212768374123,
+					"parameters": {
+						"key": "\"Level2Complete\""
+					}
+				},
+				{
+					"id": "get-item",
+					"objectClass": "Localstorage",
+					"sid": 676732918946428,
+					"parameters": {
+						"key": "\"Level3Complete\""
+					}
+				}
+			],
+			"sid": 224039564241984
+		}
+	],
 	"sid": 673584835734074
 }

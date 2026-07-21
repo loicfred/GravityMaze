@@ -42,6 +42,16 @@
 			"sid": 995599505340709
 		},
 		{
+			"eventType": "variable",
+			"name": "Username",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 326403354058539
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -352,6 +362,304 @@
 				}
 			],
 			"sid": 659315974150558
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Control_Touch",
+					"sid": 160615052490055,
+					"parameters": {
+						"object": "Buttons",
+						"type": "end"
+					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Control_Gamepad",
+					"sid": 784526918113922,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-a"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 420521512681462,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 957519444726372,
+							"parameters": {
+								"value": "SelectedButton = \"LoginDiscord\""
+							}
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 824393311348674,
+							"parameters": {
+								"value": "Username = \"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"globalThis.doDiscordLogin();"
+							]
+						}
+					],
+					"sid": 654757235892818
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 190751679572723
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 248540741818890,
+							"parameters": {
+								"value": "SelectedButton = \"LoginGoogle\""
+							}
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 210658606442185,
+							"parameters": {
+								"value": "Username = \"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"globalThis.doGoogleLogin();"
+							]
+						}
+					],
+					"sid": 207625939914458
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 437613776832739
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 352726995778991,
+							"parameters": {
+								"value": "SelectedButton = \"LoginFacebook\""
+							}
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 772458570335792,
+							"parameters": {
+								"value": "Username = \"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"language": "javascript",
+							"script": [
+								"globalThis.doFacebookLogin();"
+							]
+						}
+					],
+					"sid": 601369850289584
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 623963959191322
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 404496917354860,
+							"parameters": {
+								"value": "SelectedButton = \"Share\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "share-text",
+							"objectClass": "Share",
+							"sid": 231310792937339,
+							"parameters": {
+								"text": "\"Come play [Gravity Maze] with me! 🎮 Join here: [https://play.google.com/store/apps/details?id=com.zayaan.gravitymaze]\"",
+								"title": "\"Join me\"",
+								"url": "\"https://play.google.com/store/apps/details?id=com.zayaan.gravitymaze\""
+							}
+						}
+					],
+					"sid": 902211847438763
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 835175119392741
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 890320890214781,
+							"parameters": {
+								"value": "SelectedButton = \"ConfirmResetData\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "clear-storage",
+							"objectClass": "Localstorage",
+							"sid": 267402093211978
+						},
+						{
+							"id": "stop-all",
+							"objectClass": "Control_Audio",
+							"sid": 295162976487071
+						}
+					],
+					"sid": 676275314763204
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 663041032356722
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 788066565200654,
+							"parameters": {
+								"value": "SelectedButton = \"Exit\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "close",
+							"objectClass": "Control_Browser",
+							"sid": 771373768272570
+						}
+					],
+					"sid": 784285512917645
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 766549122354252
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 960643923542368,
+							"parameters": {
+								"layout": "SelectedButton"
+							}
+						}
+					],
+					"sid": 271929442313066
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Control_Keyboard",
+					"sid": 191392425690926,
+					"parameters": {
+						"key": 27
+					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Control_Gamepad",
+					"sid": 857162342819675,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-b"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 566252002992263,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				}
+			],
+			"sid": 310840632935417,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 977726638172537
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 452612347740687,
+							"parameters": {
+								"layout": "LayoutName= \"MenuLevels\" ? \"MenuTitle\" : LayoutName = \"MenuOptions\" ? \"MenuTitle\" : LayoutName = \"MenuReset\" ? \"MenuOptions\" : \"MenuExit\""
+							}
+						}
+					],
+					"sid": 462436609976810
+				}
+			],
+			"isOrBlock": true
 		},
 		{
 			"functionName": "Save",

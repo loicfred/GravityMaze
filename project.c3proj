@@ -129,29 +129,10 @@
 	"uniqueId": "21abntpl6uq",
 	"objectTypes": {
 		"items": [
-			"wall",
 			"OldBall",
 			"pivot",
-			"LevelBackground",
-			"WallShort",
-			"WallLong",
-			"PlayerBall",
-			"WallSquare",
-			"WallCorner",
-			"RaisedPlatform",
-			"GoalHole",
-			"RotatingBar",
 			"RotatingBarPivot",
-			"Outerwall",
-			"MazeWallFlat",
-			"WinText",
-			"Tilemap",
-			"BackgroundL1",
-			"Tilemap1",
-			"MobileAdvert",
-			"Sprite",
-			"Tilemap3",
-			"TimerText"
+			"Outerwall"
 		],
 		"subfolders": [
 			{
@@ -160,7 +141,8 @@
 					"MainMenuBackground",
 					"TitleName",
 					"Button",
-					"Saving"
+					"Saving",
+					"SquareButton"
 				],
 				"subfolders": [],
 				"name": "Menu"
@@ -177,10 +159,37 @@
 					"Control_Mouse",
 					"Control_Touch",
 					"PlatformInfo",
-					"Cursor"
+					"Cursor",
+					"MobileAdvert"
 				],
 				"subfolders": [],
 				"name": "Controls"
+			},
+			{
+				"items": [
+					"Background_Level1",
+					"LevelBackground",
+					"GoalHole",
+					"Loading",
+					"MazeWallFlat",
+					"MenuBox",
+					"PlayerBall",
+					"Background_Level3",
+					"RaisedPlatform",
+					"Tilemap",
+					"Tilemap1",
+					"Tilemap3",
+					"TimerText",
+					"wall",
+					"WallCorner",
+					"WallLong",
+					"WallShort",
+					"WallSquare",
+					"WinText",
+					"RotatingBar"
+				],
+				"subfolders": [],
+				"name": "Levels"
 			}
 		]
 	},
@@ -196,7 +205,9 @@
 	},
 	"layouts": {
 		"items": [
+			"SplashScreen",
 			"MenuTitle",
+			"MenuOptions",
 			"Level_1",
 			"Level_2",
 			"Level_2(old)",
@@ -399,5 +410,5 @@
 	},
 	"viewportWidth": 854,
 	"viewportHeight": 480,
-	"firstLayout": null
+	"firstLayout": "SplashScreen"
 }

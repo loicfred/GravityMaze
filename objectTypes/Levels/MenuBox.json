@@ -1,7 +1,7 @@
 {
-	"name": "BackgroundL1",
+	"name": "MenuBox",
 	"plugin-id": "Sprite",
-	"sid": 962333982713002,
+	"sid": 838470044643956,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -12,21 +12,21 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 923,
+						"height": 500,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5159650,
+						"imageSpriteId": 4501592,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 167322918104393,
+				"sid": 853933548442590,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
