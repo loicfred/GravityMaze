@@ -158,7 +158,7 @@
 					},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 426.855,
 						"y": 260,
@@ -191,7 +191,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 396,
 						"y": 259,
@@ -224,7 +224,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 417,
 						"y": 259,
@@ -257,7 +257,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 438,
 						"y": 259,
@@ -290,7 +290,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 459,
 						"y": 259,
@@ -325,7 +325,7 @@
 					},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 426.855,
 						"y": 330,
@@ -358,7 +358,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 365.6,
 						"y": 328.74296386718754,
@@ -391,7 +391,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 387.6,
 						"y": 328.9729638671875,
@@ -424,7 +424,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 408.6,
 						"y": 329.0879638671875,
@@ -457,7 +457,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 426.6,
 						"y": 328.8579638671875,
@@ -490,7 +490,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 444.6,
 						"y": 328.74296386718754,
@@ -523,7 +523,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 467.6,
 						"y": 329.2029638671875,
@@ -556,7 +556,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 489.6,
 						"y": 328.74296386718754,
@@ -591,7 +591,7 @@
 					},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 426.855,
 						"y": 400,
@@ -624,7 +624,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 399.2,
 						"y": 398.8250970458985,
@@ -657,7 +657,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 420.2,
 						"y": 399.05509704589844,
@@ -690,7 +690,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 454.2,
 						"y": 399.17009704589844,
@@ -723,7 +723,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 437.2,
 						"y": 398.9400970458984,
@@ -758,7 +758,7 @@
 					},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 720,
 						"y": 416,
@@ -793,7 +793,7 @@
 					},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 800,
 						"y": 416,
@@ -828,7 +828,7 @@
 					},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 640,
 						"y": 416,
@@ -863,7 +863,7 @@
 					},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 60,
 						"y": 416,

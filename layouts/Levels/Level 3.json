@@ -260,61 +260,11 @@
 			"global": false
 		},
 		{
-			"name": "GUI",
-			"overriden": 0,
+			"name": "HUD",
+			"overriden": 1,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "TimerText",
-					"properties": {
-						"text": "Text",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 18,
-						"line-height": 0,
-						"bold": true,
-						"italic": false,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 32,
-					"sid": 670835916896045,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 391.449,
-						"y": -0.4856572151184082,
-						"width": 71.10207030087736,
-						"height": 24.673639716420873,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				}
-			],
-			"sid": 815368818530310,
+			"instances": [],
+			"sid": 340864460818789,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -345,13 +295,13 @@
 			"global": false
 		},
 		{
-			"name": "HUD",
-			"overriden": 0,
+			"name": "Results",
+			"overriden": 1,
 			"subLayers": [],
 			"instances": [],
-			"sid": 208186611375146,
+			"sid": 385749371406577,
 			"effectTypes": [],
-			"isInitiallyVisible": true,
+			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
 			"isHTMLElementsLayer": false,
 			"color": [
@@ -377,14 +327,14 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
-			"global": true
+			"global": false
 		}
 	],
 	"sid": 430963071110863,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 1708,
-	"height": 960,
+	"width": 854,
+	"height": 480,
 	"unboundedScrolling": false,
 	"sampling": "auto",
 	"vpX": 0.5,

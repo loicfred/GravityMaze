@@ -141,7 +141,10 @@
 			"RotatingBarPivot",
 			"Outerwall",
 			"Force",
-			"Volume"
+			"Volume",
+			"ResultTimeTaken",
+			"ResultsCollectibles",
+			"ResultTotal"
 		],
 		"subfolders": [
 			{
@@ -216,6 +219,7 @@
 		"items": [
 			"SplashScreen",
 			"MenuTitle",
+			"MenuLevels",
 			"MenuOptions"
 		],
 		"subfolders": [

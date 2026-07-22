@@ -1,0 +1,10 @@
+{
+	"name": "ResultTotal",
+	"plugin-id": "Text",
+	"sid": 568298679885635,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
