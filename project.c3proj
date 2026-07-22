@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 48703,
+	"savedWithRelease": 49500,
 	"name": "Gravity Maze",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -105,6 +105,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "sliderbar",
+			"name": "Slider bar",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
@@ -132,7 +139,9 @@
 			"OldBall",
 			"pivot",
 			"RotatingBarPivot",
-			"Outerwall"
+			"Outerwall",
+			"Force",
+			"Volume"
 		],
 		"subfolders": [
 			{
@@ -207,13 +216,20 @@
 		"items": [
 			"SplashScreen",
 			"MenuTitle",
-			"MenuOptions",
-			"Level_1",
-			"Level_2",
-			"Level_2(old)",
-			"Level 3"
+			"MenuOptions"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Level_1",
+					"Level_2",
+					"Level_2(old)",
+					"Level 3"
+				],
+				"subfolders": [],
+				"name": "Levels"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [

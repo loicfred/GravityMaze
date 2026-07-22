@@ -845,6 +845,7 @@
 								"which": "nearest",
 								"x": "X",
 								"y": "Y",
+								"z": "0",
 								"pick-all-tied": false
 							}
 						},
