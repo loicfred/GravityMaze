@@ -343,7 +343,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "X",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -361,7 +361,7 @@
 						"x": 65,
 						"y": 50,
 						"width": 64,
-						"height": 70,
+						"height": 69.08794788273616,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -378,7 +378,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -413,7 +413,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -448,7 +448,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -483,7 +483,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -518,7 +518,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -553,7 +553,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -588,7 +588,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -623,7 +623,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -658,7 +658,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -693,7 +693,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 2",
+						"initial-animation": "Level",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false

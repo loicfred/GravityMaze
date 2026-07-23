@@ -107,6 +107,23 @@
 						"variable": "Timer",
 						"value": "0"
 					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 275834010557764,
+					"parameters": {
+						"layer": "\"Results\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 418998650258221,
+					"parameters": {
+						"time-scale": "1"
+					}
 				}
 			],
 			"sid": 566649244692645
@@ -228,9 +245,9 @@
 						{
 							"id": "set-time-scale",
 							"objectClass": "System",
-							"sid": 101044527959859,
+							"sid": 290434403854581,
 							"parameters": {
-								"time-scale": "0"
+								"time-scale": "0.01"
 							}
 						},
 						{
@@ -283,9 +300,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "ResultTotal",
-							"sid": 115045047424846,
+							"sid": 144694243908373,
 							"parameters": {
-								"text": "(LevelCollectible * 1.5) / (int(Timer % 60) * 0.015)"
+								"text": "(10 + (LevelCollectible * 1.5)) / (int(Timer % 60) * 0.015)"
 							}
 						}
 					],
@@ -418,7 +435,7 @@
 						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Control_Mouse",
-							"sid": 721802685713979,
+							"sid": 134410402316289,
 							"parameters": {
 								"object": "Buttons"
 							}
@@ -426,14 +443,14 @@
 						{
 							"id": "is-touching-object",
 							"objectClass": "Control_Touch",
-							"sid": 346679360011710,
+							"sid": 393881873906698,
 							"parameters": {
 								"object": "Buttons"
 							}
 						}
 					],
 					"actions": [],
-					"sid": 943613410464790,
+					"sid": 526657916835768,
 					"children": [
 						{
 							"eventType": "block",
@@ -441,7 +458,7 @@
 								{
 									"id": "is-animation-playing",
 									"objectClass": "Cursor",
-									"sid": 757815532028834,
+									"sid": 347280245451785,
 									"parameters": {
 										"animation": "\"Mouse\""
 									}
@@ -451,7 +468,7 @@
 								{
 									"id": "set-animation-frame",
 									"objectClass": "Buttons",
-									"sid": 125606098102511,
+									"sid": 392596645414234,
 									"parameters": {
 										"frame-number": "1"
 									}
@@ -459,7 +476,7 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 497164013286625,
+									"sid": 840332586088934,
 									"parameters": {
 										"variable": "SelectedButton",
 										"value": "Buttons.Action"
@@ -468,7 +485,7 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 590156229279080,
+									"sid": 301459572841525,
 									"parameters": {
 										"variable": "SelectedButtonX",
 										"value": "Buttons.X"
@@ -477,14 +494,14 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 995509701629218,
+									"sid": 147202166481383,
 									"parameters": {
 										"variable": "SelectedButtonY",
 										"value": "Buttons.Y"
 									}
 								}
 							],
-							"sid": 244900883427571,
+							"sid": 755353394112843,
 							"children": [
 								{
 									"eventType": "block",
@@ -492,14 +509,14 @@
 										{
 											"id": "trigger-once-while-true",
 											"objectClass": "System",
-											"sid": 131874055011199
+											"sid": 546090046418636
 										}
 									],
 									"actions": [
 										{
 											"id": "play",
 											"objectClass": "Control_Audio",
-											"sid": 804033498605283,
+											"sid": 931038843624954,
 											"parameters": {
 												"audio-file": {
 													"path": "sfx_button_hover"
@@ -511,7 +528,7 @@
 											}
 										}
 									],
-									"sid": 852477720653332
+									"sid": 621364736941172
 								},
 								{
 									"eventType": "block",
@@ -519,7 +536,7 @@
 										{
 											"id": "pick-all",
 											"objectClass": "System",
-											"sid": 260907395731470,
+											"sid": 105419895762454,
 											"parameters": {
 												"object": "Buttons"
 											}
@@ -527,7 +544,7 @@
 										{
 											"id": "pick-by-comparison",
 											"objectClass": "System",
-											"sid": 526412382995782,
+											"sid": 869887997332708,
 											"parameters": {
 												"object": "Buttons",
 												"expression": "Buttons.Action",
@@ -540,13 +557,13 @@
 										{
 											"id": "set-animation-frame",
 											"objectClass": "Buttons",
-											"sid": 321029412930573,
+											"sid": 961839107469914,
 											"parameters": {
 												"frame-number": "0"
 											}
 										}
 									],
-									"sid": 663973539089457
+									"sid": 189587696566936
 								}
 							]
 						}
@@ -559,12 +576,12 @@
 						{
 							"id": "else",
 							"objectClass": "System",
-							"sid": 631016001737704
+							"sid": 336764591965325
 						},
 						{
 							"id": "is-animation-playing",
 							"objectClass": "Cursor",
-							"sid": 317036827444136,
+							"sid": 657351569677095,
 							"parameters": {
 								"animation": "\"Mouse\""
 							}
@@ -574,13 +591,13 @@
 						{
 							"id": "set-animation-frame",
 							"objectClass": "Buttons",
-							"sid": 246008143014797,
+							"sid": 572123179725411,
 							"parameters": {
 								"frame-number": "0"
 							}
 						}
 					],
-					"sid": 259414560846498
+					"sid": 231088843866628
 				},
 				{
 					"eventType": "block",
@@ -613,9 +630,9 @@
 								{
 									"id": "evaluate-expression",
 									"objectClass": "System",
-									"sid": 797612610546736,
+									"sid": 528951681776155,
 									"parameters": {
-										"value": "SelectedButton = \"Next\""
+										"value": "SelectedButton = \"NextLevel\""
 									}
 								}
 							],

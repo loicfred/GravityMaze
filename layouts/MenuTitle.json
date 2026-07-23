@@ -745,8 +745,8 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 4,
+						"initial-animation": "Discord",
+						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -780,8 +780,8 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 6,
+						"initial-animation": "Facebook",
+						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -797,8 +797,8 @@
 					"world": {
 						"x": 800,
 						"y": 416,
-						"width": 64,
-						"height": 70,
+						"width": 64.00000000000001,
+						"height": 69.99999999999999,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -815,8 +815,8 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 5,
+						"initial-animation": "Google",
+						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -850,8 +850,8 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 1,
+						"initial-animation": "Share",
+						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},

@@ -42,6 +42,39 @@
 								"z": 0,
 								"angle": 0
 							}
+						},
+						{
+							"type": "Cursor",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Mouse",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 209,
+							"sid": 610770622088730,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 636,
+								"y": -103,
+								"width": 32,
+								"height": 32,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"z": 0,
+								"angle": 0
+							}
 						}
 					],
 					"sid": 292601319095066,
@@ -180,7 +213,7 @@
 						"tile-y-spacing": 0
 					},
 					"showing": true,
-					"locked": false,
+					"locked": true,
 					"world": {
 						"x": -14,
 						"y": -34,
@@ -362,6 +395,41 @@
 							1
 						],
 						"z": 10,
+						"angle": 0
+					}
+				},
+				{
+					"type": "SquareButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "X",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 269,
+					"sid": 941263387632075,
+					"tags": "",
+					"instanceVariables": {
+						"Action": "MenuLevels"
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 40,
+						"y": 40,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 27,
 						"angle": 0
 					}
 				}
@@ -2094,7 +2162,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "X",
 						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2111,8 +2179,8 @@
 					"world": {
 						"x": 702,
 						"y": 77,
-						"width": 64,
-						"height": 69.77198697068404,
+						"width": 64.44599303135888,
+						"height": 69.54397394136808,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
