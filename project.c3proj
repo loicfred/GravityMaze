@@ -199,7 +199,10 @@
 					"WallShort",
 					"WallSquare",
 					"WinText",
-					"RotatingBar"
+					"RotatingBar",
+					"Background_Level4",
+					"Background_Level5",
+					"Background_Level6"
 				],
 				"subfolders": [],
 				"name": "Levels"
