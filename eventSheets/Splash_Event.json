@@ -25,11 +25,11 @@
 					}
 				},
 				{
-					"id": "get-item",
-					"objectClass": "Localstorage",
-					"sid": 924977601294120,
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 848216182134506,
 					"parameters": {
-						"key": "\"StoryIntroChecked\""
+						"layout": "MenuTitle"
 					}
 				}
 			],
@@ -238,7 +238,33 @@
 							}
 						}
 					],
-					"sid": 730328794861534
+					"sid": 730328794861534,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "evaluate-expression",
+									"objectClass": "System",
+									"sid": 190227533687662,
+									"parameters": {
+										"value": "ForceMultiplier = 0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-value",
+									"objectClass": "Force",
+									"sid": 772809740080138,
+									"parameters": {
+										"value": "0.75"
+									}
+								}
+							],
+							"sid": 789856322041681
+						}
+					]
 				}
 			]
 		}

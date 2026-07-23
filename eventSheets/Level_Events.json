@@ -134,6 +134,15 @@
 					"parameters": {
 						"time-scale": "1"
 					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 548007237659330,
+					"parameters": {
+						"variable": "Complete",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 566649244692645
@@ -525,11 +534,11 @@
 								{
 									"id": "apply-force",
 									"objectClass": "PlayerBall",
-									"sid": 494947504444711,
+									"sid": 802552849179958,
 									"behaviorType": "Physics",
 									"parameters": {
-										"force-x": "AccelY * ForceMultiplier",
-										"force-y": "AccelX * ForceMultiplier",
+										"force-x": "AccelY * (ForceMultiplier + 1)",
+										"force-y": "AccelX * (ForceMultiplier + 1)",
 										"image-point": "0"
 									}
 								}
@@ -558,28 +567,6 @@
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "every-tick",
-											"objectClass": "System",
-											"sid": 669258399672767
-										}
-									],
-									"actions": [
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 588063073364763,
-											"parameters": {
-												"variable": "AccelX",
-												"value": "400"
-											}
-										}
-									],
-									"sid": 691535499609008
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
 											"id": "key-is-down",
 											"objectClass": "Control_Keyboard",
 											"sid": 661361987533798,
@@ -592,10 +579,10 @@
 										{
 											"id": "apply-force",
 											"objectClass": "PlayerBall",
-											"sid": 772393693179633,
+											"sid": 878715619470753,
 											"behaviorType": "Physics",
 											"parameters": {
-												"force-x": "-5 * ForceMultiplier",
+												"force-x": "-5 * (ForceMultiplier +1)",
 												"force-y": "0",
 												"image-point": "0"
 											}
@@ -619,10 +606,10 @@
 										{
 											"id": "apply-force",
 											"objectClass": "PlayerBall",
-											"sid": 267490340156073,
+											"sid": 482730965917014,
 											"behaviorType": "Physics",
 											"parameters": {
-												"force-x": "5 * ForceMultiplier",
+												"force-x": "5 * (ForceMultiplier + 1)",
 												"force-y": "0",
 												"image-point": "0"
 											}
@@ -646,11 +633,11 @@
 										{
 											"id": "apply-force",
 											"objectClass": "PlayerBall",
-											"sid": 521085981810720,
+											"sid": 872982541709101,
 											"behaviorType": "Physics",
 											"parameters": {
 												"force-x": "0",
-												"force-y": "-5 * ForceMultiplier",
+												"force-y": "-5 * (ForceMultiplier + 1)",
 												"image-point": "0"
 											}
 										}
@@ -673,11 +660,11 @@
 										{
 											"id": "apply-force",
 											"objectClass": "PlayerBall",
-											"sid": 809394937714194,
+											"sid": 531609228269555,
 											"behaviorType": "Physics",
 											"parameters": {
 												"force-x": "0",
-												"force-y": "5 * ForceMultiplier",
+												"force-y": "5 * (ForceMultiplier + 1)",
 												"image-point": "0"
 											}
 										}
