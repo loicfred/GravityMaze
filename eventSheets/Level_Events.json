@@ -143,6 +143,20 @@
 						"variable": "Complete",
 						"value": "false"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Control_Audio",
+					"sid": 693080282838730,
+					"parameters": {
+						"audio-file": {
+							"path": "Music/Level_2"
+						},
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 566649244692645
@@ -751,6 +765,11 @@
 							"parameters": {
 								"text": "int((10 + (LevelCollectible * 1.5)) / (int(Timer % 60) * 0.015))"
 							}
+						},
+						{
+							"id": "stop-all",
+							"objectClass": "Control_Audio",
+							"sid": 156848052366824
 						}
 					],
 					"sid": 952230526781132
@@ -1013,6 +1032,24 @@
 				}
 			],
 			"sid": 481634139387818
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 885986409715180
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Control_Audio",
+					"sid": 808257219753784
+				}
+			],
+			"sid": 204431379390046
 		}
 	],
 	"sid": 923879032612480

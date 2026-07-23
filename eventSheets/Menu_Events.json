@@ -1031,6 +1031,51 @@
 					]
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 244533893894987
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Control_Audio",
+					"sid": 866843048314319,
+					"parameters": {
+						"audio-file": {
+							"path": "Music/Mainmenu"
+						},
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 732003780895038
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 261776226085829
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Control_Audio",
+					"sid": 649097201905631
+				}
+			],
+			"sid": 684276820218872
 		}
 	],
 	"sid": 348843529504428
