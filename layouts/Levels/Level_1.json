@@ -553,7 +553,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
-					"locked": true,
+					"locked": false,
 					"world": {
 						"x": 427,
 						"y": 240,
