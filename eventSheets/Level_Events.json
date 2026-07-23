@@ -72,6 +72,16 @@
 			"sid": 893632386898611
 		},
 		{
+			"eventType": "variable",
+			"name": "ScreenAngle",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 955683701389997
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -176,6 +186,280 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Control_Mouse",
+					"sid": 323760948440412,
+					"parameters": {
+						"object": "Buttons"
+					}
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Control_Touch",
+					"sid": 423402232662201,
+					"parameters": {
+						"object": "Buttons"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 929291505031747,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Cursor",
+							"sid": 487715149141024,
+							"parameters": {
+								"animation": "\"Mouse\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Buttons",
+							"sid": 888481390573996,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 859978893160661,
+							"parameters": {
+								"variable": "SelectedButton",
+								"value": "Buttons.Action"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 362584699027019,
+							"parameters": {
+								"variable": "SelectedButtonX",
+								"value": "Buttons.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 507959187468249,
+							"parameters": {
+								"variable": "SelectedButtonY",
+								"value": "Buttons.Y"
+							}
+						}
+					],
+					"sid": 812603595699645,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 593016643483293
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Control_Audio",
+									"sid": 361999078993361,
+									"parameters": {
+										"audio-file": {
+											"path": "sfx_button_hover"
+										},
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"buttons_sfx\""
+									}
+								}
+							],
+							"sid": 195041820323960
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 105749088741845,
+									"parameters": {
+										"object": "Buttons"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 128765221584315,
+									"parameters": {
+										"object": "Buttons",
+										"expression": "Buttons.Action",
+										"comparison": 1,
+										"value": "SelectedButton"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Buttons",
+									"sid": 824592699798669,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 261092977308204
+						}
+					]
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 990595876857382
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Cursor",
+					"sid": 200504393080658,
+					"parameters": {
+						"animation": "\"Mouse\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Buttons",
+					"sid": 943273463547171,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 316323922508037
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Control_Touch",
+					"sid": 517706174529041,
+					"parameters": {
+						"object": "Buttons",
+						"type": "end"
+					}
+				},
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Control_Gamepad",
+					"sid": 481367511620178,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-a"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 224354568437968,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 716543193616548,
+							"parameters": {
+								"value": "SelectedButton = \"NextLevel\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 787496413759841,
+							"parameters": {
+								"layout": "\"Level_\" &\r\n(right(LayoutName, 1) = \"9\" ? \"1\" :  (int(right(LayoutName, 1)) + 1))"
+							}
+						}
+					],
+					"sid": 259671271095275
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 397318784795925
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 735629753799836,
+							"parameters": {
+								"value": "SelectedButton = \"Share\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "share-text",
+							"objectClass": "Share",
+							"sid": 784204239753241,
+							"parameters": {
+								"text": "\"Come play [Gravity Maze] with me! 🎮 Join here: [https://play.google.com/store/apps/details?id=com.zayaan.gravitymaze]\"",
+								"title": "\"Join me\"",
+								"url": "\"https://play.google.com/store/apps/details?id=com.zayaan.gravitymaze\""
+							}
+						}
+					],
+					"sid": 898713851162694
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 758704491318576
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 559899046882457,
+							"parameters": {
+								"layout": "SelectedButton"
+							}
+						}
+					],
+					"sid": 902133332308637
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "compare-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 569424578363453,
@@ -199,17 +483,6 @@
 					],
 					"actions": [
 						{
-							"id": "apply-force",
-							"objectClass": "PlayerBall",
-							"sid": 702142451263487,
-							"behaviorType": "Physics",
-							"parameters": {
-								"force-x": "AccelY * 0.75",
-								"force-y": "AccelX * 0.75",
-								"image-point": "0"
-							}
-						},
-						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 873767676744530,
@@ -227,7 +500,194 @@
 							}
 						}
 					],
-					"sid": 668508507397138
+					"sid": 668508507397138,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-mobile",
+									"objectClass": "PlatformInfo",
+									"sid": 483701494033995
+								},
+								{
+									"id": "is-on-android",
+									"objectClass": "PlatformInfo",
+									"sid": 462250140748229
+								},
+								{
+									"id": "is-on-ios",
+									"objectClass": "PlatformInfo",
+									"sid": 850522061663132
+								}
+							],
+							"actions": [
+								{
+									"id": "apply-force",
+									"objectClass": "PlayerBall",
+									"sid": 494947504444711,
+									"behaviorType": "Physics",
+									"parameters": {
+										"force-x": "AccelY * ForceMultiplier",
+										"force-y": "AccelX * ForceMultiplier",
+										"image-point": "0"
+									}
+								}
+							],
+							"sid": 193819445002611,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-chromeos",
+									"objectClass": "PlatformInfo",
+									"sid": 843491429205992
+								},
+								{
+									"id": "is-on-windows",
+									"objectClass": "PlatformInfo",
+									"sid": 277834921972071
+								}
+							],
+							"actions": [],
+							"sid": 378014639085873,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 669258399672767
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 588063073364763,
+											"parameters": {
+												"variable": "AccelX",
+												"value": "400"
+											}
+										}
+									],
+									"sid": 691535499609008
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Control_Keyboard",
+											"sid": 661361987533798,
+											"parameters": {
+												"key": 37
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-force",
+											"objectClass": "PlayerBall",
+											"sid": 772393693179633,
+											"behaviorType": "Physics",
+											"parameters": {
+												"force-x": "-5 * ForceMultiplier",
+												"force-y": "0",
+												"image-point": "0"
+											}
+										}
+									],
+									"sid": 700047531941861
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Control_Keyboard",
+											"sid": 605408013009219,
+											"parameters": {
+												"key": 39
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-force",
+											"objectClass": "PlayerBall",
+											"sid": 267490340156073,
+											"behaviorType": "Physics",
+											"parameters": {
+												"force-x": "5 * ForceMultiplier",
+												"force-y": "0",
+												"image-point": "0"
+											}
+										}
+									],
+									"sid": 398768857692770
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Control_Keyboard",
+											"sid": 558114742953637,
+											"parameters": {
+												"key": 38
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-force",
+											"objectClass": "PlayerBall",
+											"sid": 521085981810720,
+											"behaviorType": "Physics",
+											"parameters": {
+												"force-x": "0",
+												"force-y": "-5 * ForceMultiplier",
+												"image-point": "0"
+											}
+										}
+									],
+									"sid": 559110675267212
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Control_Keyboard",
+											"sid": 182804052635358,
+											"parameters": {
+												"key": 40
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "apply-force",
+											"objectClass": "PlayerBall",
+											"sid": 809394937714194,
+											"behaviorType": "Physics",
+											"parameters": {
+												"force-x": "0",
+												"force-y": "5 * ForceMultiplier",
+												"image-point": "0"
+											}
+										}
+									],
+									"sid": 538889847489770
+								}
+							],
+							"isOrBlock": true
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -428,280 +888,6 @@
 						}
 					],
 					"sid": 366283089018982
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "cursor-is-over-object",
-							"objectClass": "Control_Mouse",
-							"sid": 134410402316289,
-							"parameters": {
-								"object": "Buttons"
-							}
-						},
-						{
-							"id": "is-touching-object",
-							"objectClass": "Control_Touch",
-							"sid": 393881873906698,
-							"parameters": {
-								"object": "Buttons"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 526657916835768,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-animation-playing",
-									"objectClass": "Cursor",
-									"sid": 347280245451785,
-									"parameters": {
-										"animation": "\"Mouse\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation-frame",
-									"objectClass": "Buttons",
-									"sid": 392596645414234,
-									"parameters": {
-										"frame-number": "1"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 840332586088934,
-									"parameters": {
-										"variable": "SelectedButton",
-										"value": "Buttons.Action"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 301459572841525,
-									"parameters": {
-										"variable": "SelectedButtonX",
-										"value": "Buttons.X"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 147202166481383,
-									"parameters": {
-										"variable": "SelectedButtonY",
-										"value": "Buttons.Y"
-									}
-								}
-							],
-							"sid": 755353394112843,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "trigger-once-while-true",
-											"objectClass": "System",
-											"sid": 546090046418636
-										}
-									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Control_Audio",
-											"sid": 931038843624954,
-											"parameters": {
-												"audio-file": {
-													"path": "sfx_button_hover"
-												},
-												"loop": "not-looping",
-												"volume": "0",
-												"stereo-pan": "0",
-												"tag-optional": "\"buttons_sfx\""
-											}
-										}
-									],
-									"sid": 621364736941172
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-all",
-											"objectClass": "System",
-											"sid": 105419895762454,
-											"parameters": {
-												"object": "Buttons"
-											}
-										},
-										{
-											"id": "pick-by-comparison",
-											"objectClass": "System",
-											"sid": 869887997332708,
-											"parameters": {
-												"object": "Buttons",
-												"expression": "Buttons.Action",
-												"comparison": 1,
-												"value": "SelectedButton"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation-frame",
-											"objectClass": "Buttons",
-											"sid": 961839107469914,
-											"parameters": {
-												"frame-number": "0"
-											}
-										}
-									],
-									"sid": 189587696566936
-								}
-							]
-						}
-					],
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 336764591965325
-						},
-						{
-							"id": "is-animation-playing",
-							"objectClass": "Cursor",
-							"sid": 657351569677095,
-							"parameters": {
-								"animation": "\"Mouse\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "Buttons",
-							"sid": 572123179725411,
-							"parameters": {
-								"frame-number": "0"
-							}
-						}
-					],
-					"sid": 231088843866628
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-touched-object",
-							"objectClass": "Control_Touch",
-							"sid": 170547532278027,
-							"parameters": {
-								"object": "Buttons",
-								"type": "end"
-							}
-						},
-						{
-							"id": "on-button-pressed",
-							"objectClass": "Control_Gamepad",
-							"sid": 168518733522650,
-							"parameters": {
-								"gamepad": "0",
-								"button": "button-a"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 184882210859750,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "evaluate-expression",
-									"objectClass": "System",
-									"sid": 528951681776155,
-									"parameters": {
-										"value": "SelectedButton = \"NextLevel\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "go-to-layout-by-name",
-									"objectClass": "System",
-									"sid": 155264339529820,
-									"parameters": {
-										"layout": "\"Level_\" &\r\n(right(LayoutName, 1) = \"9\" ? \"1\" :  (int(right(LayoutName, 1)) + 1))"
-									}
-								}
-							],
-							"sid": 771753502367934
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 807422895116322
-								},
-								{
-									"id": "evaluate-expression",
-									"objectClass": "System",
-									"sid": 987622433785653,
-									"parameters": {
-										"value": "SelectedButton = \"Share\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "share-text",
-									"objectClass": "Share",
-									"sid": 232439308709090,
-									"parameters": {
-										"text": "\"Come play [Gravity Maze] with me! 🎮 Join here: [https://play.google.com/store/apps/details?id=com.zayaan.gravitymaze]\"",
-										"title": "\"Join me\"",
-										"url": "\"https://play.google.com/store/apps/details?id=com.zayaan.gravitymaze\""
-									}
-								}
-							],
-							"sid": 160377034679343
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 778369525811387
-								}
-							],
-							"actions": [
-								{
-									"id": "go-to-layout-by-name",
-									"objectClass": "System",
-									"sid": 624617484976135,
-									"parameters": {
-										"layout": "SelectedButton"
-									}
-								}
-							],
-							"sid": 307076285865058
-						}
-					],
-					"isOrBlock": true
 				}
 			]
 		}

@@ -52,6 +52,26 @@
 			"sid": 326403354058539
 		},
 		{
+			"eventType": "variable",
+			"name": "MotionSupported",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 440451616841833
+		},
+		{
+			"eventType": "variable",
+			"name": "ForceMultiplier",
+			"type": "number",
+			"initialValue": "0.75",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 541014130035851
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -192,6 +212,76 @@
 				}
 			],
 			"sid": 815709614624490
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changing",
+					"objectClass": "Volume",
+					"sid": 494269982423107
+				}
+			],
+			"actions": [
+				{
+					"id": "set-item",
+					"objectClass": "Localstorage",
+					"sid": 348655652595911,
+					"parameters": {
+						"key": "\"Volume\"",
+						"value": "Volume.Value"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 674149230820533,
+					"parameters": {
+						"variable": "Volume",
+						"value": "max(0, min(int(Volume.Value), 100))"
+					}
+				},
+				{
+					"id": "set-master-volume",
+					"objectClass": "Control_Audio",
+					"sid": 683634065359863,
+					"parameters": {
+						"db": "-50 + (Volume = 0 ? -100 : Volume)"
+					}
+				}
+			],
+			"sid": 628370941574304
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changing",
+					"objectClass": "Force",
+					"sid": 163581521374251
+				}
+			],
+			"actions": [
+				{
+					"id": "set-item",
+					"objectClass": "Localstorage",
+					"sid": 393381348312976,
+					"parameters": {
+						"key": "\"Force\"",
+						"value": "Volume.Value"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 339335739522018,
+					"parameters": {
+						"variable": "ForceMultiplier",
+						"value": "max(0, min(int(Force.Value), 100)) / 100"
+					}
+				}
+			],
+			"sid": 489911624905535
 		},
 		{
 			"eventType": "block",

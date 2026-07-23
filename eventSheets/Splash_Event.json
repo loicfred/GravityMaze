@@ -49,9 +49,9 @@
 				{
 					"id": "get-item",
 					"objectClass": "Localstorage",
-					"sid": 567879582925121,
+					"sid": 878334586915101,
 					"parameters": {
-						"key": "\"Sensitivity\""
+						"key": "\"Force\""
 					}
 				},
 				{
@@ -87,7 +87,160 @@
 					}
 				}
 			],
-			"sid": 224039564241984
+			"sid": 224039564241984,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-mobile",
+							"objectClass": "PlatformInfo",
+							"sid": 324785828695528
+						},
+						{
+							"id": "is-on-android",
+							"objectClass": "PlatformInfo",
+							"sid": 624179794382917
+						},
+						{
+							"id": "is-on-ios",
+							"objectClass": "PlatformInfo",
+							"sid": 587069200031368
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 670388683125372,
+							"parameters": {
+								"variable": "MotionSupported",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 837219157199409,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-chromeos",
+							"objectClass": "PlatformInfo",
+							"sid": 253867793358425
+						},
+						{
+							"id": "is-on-windows",
+							"objectClass": "PlatformInfo",
+							"sid": 104867429734668
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 862704415977730,
+							"parameters": {
+								"variable": "MotionSupported",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 625421494194584,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-item-get",
+					"objectClass": "Localstorage",
+					"sid": 360421698627470
+				}
+			],
+			"actions": [],
+			"sid": 139083194621323,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-key",
+							"objectClass": "Localstorage",
+							"sid": 140611400763863,
+							"parameters": {
+								"comparison": 0,
+								"string": "\"Volume\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 685270114663074,
+							"parameters": {
+								"variable": "Volume",
+								"value": "max(0, min(int(Localstorage.ItemValue), 100))"
+							}
+						},
+						{
+							"id": "set-master-volume",
+							"objectClass": "Control_Audio",
+							"sid": 692715985233491,
+							"parameters": {
+								"db": "-50 + (Volume = 0 ? -100 : Volume)"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "Volume",
+							"sid": 487991118562622,
+							"parameters": {
+								"value": "max(0, min(Volume, 100))"
+							}
+						}
+					],
+					"sid": 433661948524907
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-key",
+							"objectClass": "Localstorage",
+							"sid": 551558878382145,
+							"parameters": {
+								"comparison": 0,
+								"string": "\"Force\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 271011076962451,
+							"parameters": {
+								"variable": "ForceMultiplier",
+								"value": "max(0, min(int(Localstorage.ItemValue), 100))"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "Force",
+							"sid": 452858992213890,
+							"parameters": {
+								"value": "max(0, min(ForceMultiplier * 100, 100))"
+							}
+						}
+					],
+					"sid": 730328794861534
+				}
+			]
 		}
 	],
 	"sid": 673584835734074

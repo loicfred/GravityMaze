@@ -2,15 +2,17 @@ let tokenClient;
 let g_runtime;
 
 runOnStartup(async runtime => {
-	if (typeof DeviceMotionEvent !== "undefined" && typeof DeviceMotionEvent.requestPermission === "function") {
-		await DeviceMotionEvent.requestPermission();
-	}
+    if (runtime.globalVars.MotionSupported) {
+	    if (typeof DeviceMotionEvent !== "undefined" && typeof DeviceMotionEvent.requestPermission === "function") {
+		    await DeviceMotionEvent.requestPermission();
+	    }
 
-	window.addEventListener("devicemotion", (e) => {
-		runtime.globalVars.AccelX = e.accelerationIncludingGravity.x || 0;
-		runtime.globalVars.AccelY = e.accelerationIncludingGravity.y || 0;
-		runtime.globalVars.AccelZ = e.accelerationIncludingGravity.z || 0;
-	})
+	    window.addEventListener("devicemotion", (e) => {
+		    runtime.globalVars.AccelX = e.accelerationIncludingGravity.x || 0;
+		    runtime.globalVars.AccelY = e.accelerationIncludingGravity.y || 0;
+		    runtime.globalVars.AccelZ = e.accelerationIncludingGravity.z || 0;
+	    })
+    }
 
     const s = document.createElement("script");
     s.src = "https://accounts.google.com/gsi/client";

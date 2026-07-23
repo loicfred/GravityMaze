@@ -180,7 +180,7 @@
 			{
 				"items": [
 					"Background_Level1",
-					"LevelBackground",
+					"Background_Level2",
 					"GoalHole",
 					"Loading",
 					"MazeWallFlat",
@@ -189,7 +189,7 @@
 					"Background_Level3",
 					"RaisedPlatform",
 					"Tilemap",
-					"Tilemap1",
+					"TilemapMaze1",
 					"Tilemap3",
 					"TimerText",
 					"wall",
@@ -237,11 +237,7 @@
 	"eventSheets": {
 		"items": [
 			"Menu_Events",
-			"Event sheet 1",
-			"Event sheet 2",
-			"Event sheet 3",
 			"Splash_Event",
-			"Event sheet 4",
 			"Level_Events"
 		],
 		"subfolders": []
