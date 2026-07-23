@@ -890,6 +890,114 @@
 					"sid": 366283089018982
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 160261238874592
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "RotatingBar",
+					"sid": 545403479959653,
+					"parameters": {
+						"instance-variable": "PairID",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "RotatingBarPivot",
+					"sid": 976872561466357,
+					"parameters": {
+						"instance-variable": "PairID",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-revolute-joint",
+					"objectClass": "RotatingBar",
+					"sid": 281733169045559,
+					"behaviorType": "Physics",
+					"parameters": {
+						"this-image-point": "0",
+						"object": "RotatingBarPivot"
+					}
+				}
+			],
+			"sid": 874179955106070
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 202753080596544
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "RotatingBar",
+					"sid": 896968900689011,
+					"parameters": {
+						"instance-variable": "PairID",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "RotatingBarPivot",
+					"sid": 311162584064034,
+					"parameters": {
+						"instance-variable": "PairID",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-revolute-joint",
+					"objectClass": "RotatingBar",
+					"sid": 731605920494249,
+					"behaviorType": "Physics",
+					"parameters": {
+						"this-image-point": "0",
+						"object": "RotatingBarPivot"
+					}
+				}
+			],
+			"sid": 331954622927361
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 556453222459371
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angular-velocity",
+					"objectClass": "RotatingBar",
+					"sid": 207889510244427,
+					"behaviorType": "Physics",
+					"parameters": {
+						"angular-velocity": "90"
+					}
+				}
+			],
+			"sid": 284750462908952
 		}
 	],
 	"sid": 923879032612480
