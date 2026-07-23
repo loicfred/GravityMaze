@@ -985,6 +985,34 @@
 				}
 			],
 			"sid": 284750462908952
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ImpulsePusher",
+					"sid": 328439243471881,
+					"parameters": {
+						"object": "PlayerBall"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-impulse-towards-position",
+					"objectClass": "PlayerBall",
+					"sid": 116056098893748,
+					"behaviorType": "Physics",
+					"parameters": {
+						"impulse": "10",
+						"x": "-PlayerBall.x",
+						"y": "-PlayerBall.Y",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 481634139387818
 		}
 	],
 	"sid": 923879032612480

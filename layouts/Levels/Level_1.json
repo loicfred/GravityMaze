@@ -166,11 +166,11 @@
 					},
 					"ownData": {
 						"tilemapData": {
-							"width": 57,
-							"height": 36,
-							"max-width": 70,
-							"max-height": 54,
-							"data": "56x0,15x1,2x0,11x1,26x0,1,13x0,1,2x0,1,36x0,1,13x0,1,2x0,1,36x0,1,13x0,1,2x0,1,7x0,2x1,27x0,1,3x0,7x1,3x0,1,2x0,1,7x0,2x1,27x0,1,3x0,1,5x0,1,3x0,1,2x0,1,7x0,2x1,27x0,1,3x0,1,9x0,1,2x0,1,7x0,2x1,27x0,1,3x0,1,9x0,1,2x0,1,7x0,2x1,27x0,1,3x0,1,9x0,1,2x0,1,3x0,6x1,27x0,1,3x0,1,5x0,1,3x0,1,2x0,1,7x0,2x1,27x0,5x1,5x0,1,3x0,1,2x0,1,7x0,2x1,27x0,1,9x0,1,3x0,1,2x0,1,7x0,2x1,27x0,1,9x0,1,3x0,1,2x0,5x1,3x0,2x1,27x0,1,5x0,5x1,3x0,1,2x0,1,3x0,1,3x0,2x1,27x0,1,5x0,1,7x0,1,2x0,5x1,4x0,1,27x0,1,5x0,1,7x0,1,2x0,1,8x0,1,27x0,1,2x0,4x1,7x0,1,2x0,1,8x0,1,27x0,1,2x0,1,10x0,1,2x0,1,8x0,1,27x0,1,2x0,1,10x0,1,2x0,1,3x0,3x1,2x0,1,27x0,1,2x0,1,10x0,1,2x0,1,3x0,3x1,2x0,1,27x0,1,2x0,9x1,2x0,1,2x0,1,3x0,3x1,2x0,1,27x0,1,10x0,1,2x0,1,2x0,1,8x0,1,27x0,1,10x0,1,2x0,1,2x0,1,8x0,1,27x0,1,10x0,1,2x0,1,2x0,1,8x0,1,27x0,7x1,4x0,1,2x0,1,2x0,1,8x0,1,33x0,1,4x0,1,2x0,4x1,3x0,6x1,33x0,1,4x0,1,9x0,1,32x0,7x1,4x0,1,9x0,1,32x0,1,10x0,1,9x0,1,32x0,1,10x0,1,9x0,1,32x0,1,10x0,1,9x0,1,0,5x1,26x0,1,2x0,5x1,3x0,1,9x0,1,0,1,3x0,1,26x0,1,2x0,1,3x0,1,3x0,1,9x0,1,0,1,3x0,1,26x0,1,2x0,1,3x0,1,3x0,1,9x0,1,0,1,3x0,1,26x0,1,2x0,1,3x0,1,3x0,1,9x0,1,0,1,3x0,1,26x0,1,2x0,1,3x0,1,3x0,1,9x0,1,0,1,3x0,1,26x0,1,2x0,1,3x0,1,3x0,13x1,3x0,1,26x0,1,2x0,1,3x0,1,3x0,1,42x0,1,2x0,1,3x0,1,3x0,1,42x0,1,2x0,1,3x0,1,3x0,1,42x0,1,2x0,1,3x0,1,3x0,1,42x0,1,2x0,5x1,3x0,1,4x0,12x1,26x0,1,10x0,1,4x0,1,37x0,1,10x0,1,4x0,12x1,26x0,1,10x0,1,42x0,1,10x0,1,42x0,1,10x0,1,42x0,1,10x0,1,42x0,1,10x0,15x1,28x0,1,53x0,1,53x0,1,969x0"
+							"width": 56,
+							"height": 34,
+							"max-width": 56,
+							"max-height": 34,
+							"data": "36x0,15x1,2x0,13x1,4x0,1,13x0,1,2x0,1,11x0,1,4x0,1,13x0,1,2x0,1,11x0,1,4x0,1,13x0,1,2x0,1,7x0,2x1,2x0,1,4x0,1,3x0,7x1,3x0,1,2x0,1,7x0,2x1,2x0,1,4x0,1,3x0,1,5x0,1,3x0,1,2x0,1,7x0,2x1,2x0,1,4x0,1,3x0,1,9x0,1,2x0,1,7x0,2x1,2x0,1,4x0,1,3x0,1,9x0,1,2x0,1,7x0,2x1,2x0,1,4x0,1,3x0,1,9x0,1,2x0,1,3x0,6x1,2x0,1,4x0,1,3x0,1,5x0,1,3x0,1,2x0,1,7x0,2x1,2x0,1,4x0,5x1,5x0,1,3x0,1,2x0,1,7x0,2x1,2x0,1,4x0,1,9x0,1,3x0,1,2x0,1,7x0,2x1,2x0,1,4x0,1,9x0,1,3x0,1,2x0,5x1,3x0,2x1,2x0,1,4x0,1,5x0,5x1,3x0,1,2x0,1,3x0,1,3x0,2x1,2x0,1,4x0,1,5x0,1,7x0,1,2x0,5x1,4x0,1,2x0,1,4x0,1,5x0,1,7x0,1,2x0,1,8x0,1,2x0,1,4x0,1,2x0,4x1,7x0,1,2x0,1,8x0,1,2x0,1,4x0,1,2x0,1,10x0,1,2x0,1,8x0,1,2x0,1,4x0,1,2x0,1,10x0,1,2x0,1,3x0,3x1,2x0,1,2x0,1,4x0,1,2x0,1,10x0,1,2x0,1,3x0,3x1,2x0,1,2x0,1,4x0,1,2x0,9x1,2x0,1,2x0,1,3x0,3x1,2x0,1,2x0,1,4x0,1,10x0,1,2x0,1,2x0,1,8x0,1,2x0,1,4x0,1,10x0,1,2x0,1,2x0,1,8x0,1,2x0,1,4x0,1,10x0,1,2x0,1,2x0,1,8x0,1,2x0,1,4x0,7x1,4x0,1,2x0,1,2x0,1,8x0,1,2x0,1,10x0,1,4x0,1,2x0,4x1,3x0,6x1,2x0,1,10x0,1,4x0,1,9x0,1,7x0,1,4x0,7x1,4x0,1,9x0,1,7x0,1,4x0,1,10x0,1,9x0,1,7x0,1,4x0,1,10x0,1,9x0,1,7x0,1,4x0,1,10x0,1,9x0,1,0,5x1,0,1,4x0,1,2x0,5x1,3x0,1,9x0,1,0,1,3x0,1,0,1,4x0,1,2x0,1,3x0,1,3x0,1,9x0,1,0,1,3x0,1,0,1,4x0,1,2x0,1,3x0,1,3x0,1,9x0,1,0,1,3x0,1,0,1,4x0,1,2x0,1,3x0,1,3x0,1,9x0,1,0,1,3x0,1,0,1,4x0,1,2x0,1,3x0,1,3x0,1,9x0,1,0,1,3x0,1,0,1,4x0,1,2x0,1,3x0,1,3x0,13x1,3x0,3x1,4x0,1,2x0,1,3x0,1,3x0,1,17x0,1,4x0,1,2x0,1,3x0,1,3x0,1,17x0,1,4x0,1,2x0,1,3x0,1,3x0,1,17x0,1,4x0,1,2x0,1,3x0,1,3x0,1,17x0,1,4x0,1,2x0,5x1,3x0,1,4x0,14x1,4x0,1,10x0,1,4x0,1,12x0,1,4x0,1,10x0,1,4x0,14x1,4x0,1,10x0,1,17x0,1,4x0,1,10x0,1,17x0,1,4x0,1,10x0,1,17x0,1,4x0,1,10x0,1,17x0,1,4x0,1,10x0,15x1,3x0,1,4x0,1,28x0,1,4x0,1,28x0,1,4x0,1,28x0,1,4x0,30x1,70x0"
 						},
 						"tile-width": 16,
 						"tile-height": 16,
@@ -184,8 +184,8 @@
 					"world": {
 						"x": -14,
 						"y": -34,
-						"width": 920,
-						"height": 583,
+						"width": 902,
+						"height": 546,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -231,93 +231,26 @@
 					}
 				},
 				{
-					"type": "MazeWallFlat",
+					"type": "ImpulsePusher",
 					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 199,
-					"sid": 772930623284790,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {
-						"Physics": {
-							"properties": {
-								"immovable": true,
-								"collision-mask": "bounding-box",
-								"collision-filter-tags": "",
-								"collision-filter-mode": "exclusive",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.3,
-								"elasticity": 0.1,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 713.5,
-						"y": 481,
-						"width": 303.42974087926825,
-						"height": 38.72777305643807,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "MazeWallFlat",
-					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 270,
-					"sid": 369312036673119,
+					"sid": 920496877644098,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {
-						"Physics": {
-							"properties": {
-								"immovable": true,
-								"collision-mask": "bounding-box",
-								"collision-filter-tags": "",
-								"collision-filter-mode": "exclusive",
-								"prevent-rotation": false,
-								"density": 1,
-								"friction": 0.3,
-								"elasticity": 0.1,
-								"linear-damping": 0,
-								"angular-damping": 0.01,
-								"bullet": false,
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 942,
-						"y": 146,
-						"width": 220.42974087926825,
-						"height": 764.7277730564381,
+						"x": 771,
+						"y": 121,
+						"width": 24.068117601754906,
+						"height": 24.068117601754906,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -605,6 +538,39 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
+				{
+					"type": "ImpulsePusher",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 199,
+					"sid": 578970066097801,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 677.0574352657212,
+						"y": 169.2363140499009,
+						"width": 24.068117601754906,
+						"height": 24.068117601754906,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
 				{
 					"type": "MenuBox",
 					"properties": {

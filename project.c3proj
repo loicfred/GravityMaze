@@ -144,7 +144,8 @@
 			"Volume",
 			"ResultTimeTaken",
 			"ResultsCollectibles",
-			"ResultTotal"
+			"ResultTotal",
+			"ImpulsePusher"
 		],
 		"subfolders": [
 			{
