@@ -593,10 +593,10 @@
 										{
 											"id": "apply-force",
 											"objectClass": "PlayerBall",
-											"sid": 878715619470753,
+											"sid": 364204137602952,
 											"behaviorType": "Physics",
 											"parameters": {
-												"force-x": "-5 * (ForceMultiplier +1)",
+												"force-x": "-1 * (ForceMultiplier +1)",
 												"force-y": "0",
 												"image-point": "0"
 											}
@@ -620,10 +620,10 @@
 										{
 											"id": "apply-force",
 											"objectClass": "PlayerBall",
-											"sid": 482730965917014,
+											"sid": 248338855223905,
 											"behaviorType": "Physics",
 											"parameters": {
-												"force-x": "5 * (ForceMultiplier + 1)",
+												"force-x": "1 * (ForceMultiplier + 1)",
 												"force-y": "0",
 												"image-point": "0"
 											}
@@ -647,11 +647,11 @@
 										{
 											"id": "apply-force",
 											"objectClass": "PlayerBall",
-											"sid": 872982541709101,
+											"sid": 839401033440207,
 											"behaviorType": "Physics",
 											"parameters": {
 												"force-x": "0",
-												"force-y": "-5 * (ForceMultiplier + 1)",
+												"force-y": "-1 * (ForceMultiplier + 1)",
 												"image-point": "0"
 											}
 										}
@@ -674,11 +674,11 @@
 										{
 											"id": "apply-force",
 											"objectClass": "PlayerBall",
-											"sid": 531609228269555,
+											"sid": 882949235787196,
 											"behaviorType": "Physics",
 											"parameters": {
 												"force-x": "0",
-												"force-y": "5 * (ForceMultiplier + 1)",
+												"force-y": "1 * (ForceMultiplier + 1)",
 												"image-point": "0"
 											}
 										}
@@ -773,6 +773,72 @@
 						}
 					],
 					"sid": 952230526781132
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerBall",
+							"sid": 435856470988765,
+							"parameters": {
+								"object": "Death"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 379758923783981
+						}
+					],
+					"sid": 691143420495657
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerBall",
+							"sid": 902388730972869,
+							"parameters": {
+								"object": "Level_Coin"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Level_Coin",
+							"sid": 964998741861360
+						}
+					],
+					"sid": 897652635618132,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 668119193852155
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 305855981972626,
+									"parameters": {
+										"variable": "LevelCollectible",
+										"value": "LevelCollectible + 1"
+									}
+								}
+							],
+							"sid": 122219510750214
+						}
+					]
 				}
 			]
 		},

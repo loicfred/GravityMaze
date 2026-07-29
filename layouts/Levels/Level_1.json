@@ -2231,7 +2231,7 @@
 					"type": "SquareButton",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "X",
+						"initial-animation": "Share",
 						"initial-frame": 1,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2248,8 +2248,8 @@
 					"world": {
 						"x": 702,
 						"y": 77,
-						"width": 64.44599303135888,
-						"height": 69.54397394136808,
+						"width": 64,
+						"height": 69.77198697068404,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

@@ -145,7 +145,8 @@
 			"ResultTimeTaken",
 			"ResultsCollectibles",
 			"ResultTotal",
-			"ImpulsePusher"
+			"ImpulsePusher",
+			"Death"
 		],
 		"subfolders": [
 			{
@@ -202,7 +203,12 @@
 					"RotatingBar",
 					"Background_Level4",
 					"Background_Level5",
-					"Background_Level6"
+					"Background_Level6",
+					"Background_Level7",
+					"Background_Level8",
+					"Background_Level9",
+					"Background_Level10",
+					"Level_Coin"
 				],
 				"subfolders": [],
 				"name": "Levels"
@@ -232,7 +238,11 @@
 					"Level_1",
 					"Level_2",
 					"Level_3",
-					"Level_6"
+					"Level_6",
+					"Level_7",
+					"Level_8",
+					"Level_9",
+					"Level_10"
 				],
 				"subfolders": [],
 				"name": "Levels"
