@@ -110,11 +110,29 @@
 					}
 				},
 				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 767487277281148,
+					"parameters": {
+						"variable": "Complete",
+						"value": "false"
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 199755580610600,
 					"parameters": {
 						"variable": "Timer",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 102821147766023,
+					"parameters": {
+						"variable": "LevelCollectible",
 						"value": "0"
 					}
 				},
@@ -133,15 +151,6 @@
 					"sid": 418998650258221,
 					"parameters": {
 						"time-scale": "1"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 548007237659330,
-					"parameters": {
-						"variable": "Complete",
-						"value": "false"
 					}
 				},
 				{
@@ -805,6 +814,11 @@
 							"parameters": {
 								"object": "Level_Coin"
 							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 771258637423806
 						}
 					],
 					"actions": [
@@ -812,33 +826,18 @@
 							"id": "destroy",
 							"objectClass": "Level_Coin",
 							"sid": 964998741861360
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 855252493302215,
+							"parameters": {
+								"variable": "LevelCollectible",
+								"value": "LevelCollectible + 1"
+							}
 						}
 					],
-					"sid": 897652635618132,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "trigger-once-while-true",
-									"objectClass": "System",
-									"sid": 668119193852155
-								}
-							],
-							"actions": [
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 305855981972626,
-									"parameters": {
-										"variable": "LevelCollectible",
-										"value": "LevelCollectible + 1"
-									}
-								}
-							],
-							"sid": 122219510750214
-						}
-					]
+					"sid": 897652635618132
 				}
 			]
 		},
