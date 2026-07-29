@@ -761,9 +761,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "ResultTotal",
-							"sid": 151845726020889,
+							"sid": 281777179750519,
 							"parameters": {
-								"text": "int((10 + (LevelCollectible * 1.5)) / (int(Timer % 60) * 0.015))"
+								"text": "int((10 + (LevelCollectible * 5)) / (int(Timer % 60) * 0.015))"
 							}
 						},
 						{
