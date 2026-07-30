@@ -124,30 +124,11 @@
 			"name": "Physics",
 			"author": "Scirra",
 			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
-			"author": "Scirra",
-			"bundled": false
 		}
 	],
 	"uniqueId": "21abntpl6uq",
 	"objectTypes": {
-		"items": [
-			"OldBall",
-			"pivot",
-			"RotatingBarPivot",
-			"Outerwall",
-			"Force",
-			"Volume",
-			"ResultTimeTaken",
-			"ResultsCollectibles",
-			"ResultTotal",
-			"ImpulsePusher",
-			"Death"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -156,7 +137,9 @@
 					"TitleName",
 					"Button",
 					"Saving",
-					"SquareButton"
+					"SquareButton",
+					"Loading",
+					"Welcome"
 				],
 				"subfolders": [],
 				"name": "Menu"
@@ -165,7 +148,7 @@
 				"items": [
 					"SnapshotData",
 					"Share",
-					"Localstorage",
+					"LocalStorage",
 					"Control_Keyboard",
 					"Control_Gamepad",
 					"Control_Browser",
@@ -174,41 +157,32 @@
 					"Control_Touch",
 					"PlatformInfo",
 					"Cursor",
-					"MobileAdvert"
+					"MobileAdvert",
+					"Force",
+					"Volume"
 				],
 				"subfolders": [],
 				"name": "Controls"
 			},
 			{
 				"items": [
-					"Background_Level1",
-					"Background_Level2",
+					"Background_Level",
 					"GoalHole",
-					"Loading",
 					"MazeWallFlat",
 					"MenuBox",
 					"PlayerBall",
-					"Background_Level3",
-					"RaisedPlatform",
 					"Tilemap",
 					"TilemapMaze1",
 					"Tilemap3",
 					"TimerText",
-					"wall",
-					"WallCorner",
-					"WallLong",
-					"WallShort",
-					"WallSquare",
-					"WinText",
 					"RotatingBar",
-					"Background_Level4",
-					"Background_Level5",
-					"Background_Level6",
-					"Background_Level7",
-					"Background_Level8",
-					"Background_Level9",
-					"Background_Level10",
-					"Level_Coin"
+					"Level_Coin",
+					"Death",
+					"ImpulsePusher",
+					"ResultsCollectibles",
+					"ResultTimeTaken",
+					"ResultTotal",
+					"RotatingBarPivot"
 				],
 				"subfolders": [],
 				"name": "Levels"
@@ -254,8 +228,8 @@
 	"eventSheets": {
 		"items": [
 			"Menu_Events",
-			"Splash_Event",
-			"Level_Events"
+			"Level_Events",
+			"Splash_Event"
 		],
 		"subfolders": []
 	},
@@ -296,7 +270,7 @@
 							}
 						},
 						{
-							"name": "Level_2.webm",
+							"name": "Levels.webm",
 							"type": "audio/webm; codecs=opus",
 							"sid": 294917592596229,
 							"file-info": {

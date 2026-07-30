@@ -268,7 +268,7 @@
 			"actions": [
 				{
 					"id": "set-item",
-					"objectClass": "Localstorage",
+					"objectClass": "LocalStorage",
 					"sid": 348655652595911,
 					"parameters": {
 						"key": "\"Volume\"",
@@ -291,6 +291,10 @@
 					"parameters": {
 						"db": "-50 + (Volume = 0 ? -100 : Volume)"
 					}
+				},
+				{
+					"callFunction": "Save",
+					"sid": 868944937843921
 				}
 			],
 			"sid": 628370941574304
@@ -307,7 +311,7 @@
 			"actions": [
 				{
 					"id": "set-item",
-					"objectClass": "Localstorage",
+					"objectClass": "LocalStorage",
 					"sid": 274793182589453,
 					"parameters": {
 						"key": "\"Force\"",
@@ -322,6 +326,10 @@
 						"variable": "ForceMultiplier",
 						"value": "max(0, min(int(Force.Value), 100)) / 100"
 					}
+				},
+				{
+					"callFunction": "Save",
+					"sid": 167702274310136
 				}
 			],
 			"sid": 489911624905535
@@ -675,7 +683,7 @@
 					"actions": [
 						{
 							"id": "clear-storage",
-							"objectClass": "Localstorage",
+							"objectClass": "LocalStorage",
 							"sid": 267402093211978
 						},
 						{
@@ -1092,6 +1100,37 @@
 				}
 			],
 			"sid": 684276820218872
+		},
+		{
+			"functionName": "OnLogin",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "evaluate-expression",
+					"objectClass": "System",
+					"sid": 838399403007790,
+					"parameters": {
+						"value": "Username <> \"\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Welcome",
+					"sid": 504754984397847,
+					"parameters": {
+						"text": "\"Welcome \" & Username & \"!\""
+					}
+				}
+			],
+			"sid": 431651156148727
 		}
 	],
 	"sid": 348843529504428

@@ -44,13 +44,14 @@ runOnStartup(async runtime => {
         });
     };
     document.head.appendChild(fb);
+    g_runtime = runtime;
 });
 
 
 
 // Discord
 globalThis.doDiscordLogin = () => {
-    const clientId = "1522256684582572295";
+    const clientId = "1532442612932280522";
     const redirect = location.origin + "/";
     const url = "https://discord.com/oauth2/authorize?client_id=" + clientId
         + "&response_type=token&scope=identify"
@@ -60,15 +61,19 @@ globalThis.doDiscordLogin = () => {
     const timer = setInterval(async () => {
         if (!popup || popup.closed) { clearInterval(timer); return; }
         let hash = "";
-        try { hash = popup.location.hash; } catch (e) { return; } // still on discord.com, keep waiting
+        try { hash = popup.location.hash; } catch (e) { return; }
+        console.log("1" + hash)
         if (hash.includes("access_token")) {
             clearInterval(timer);
+            console.log("2" + hash)
             const token = new URLSearchParams(hash.substring(1)).get("access_token");
             popup.close();
+            console.log("3" + token)
             const res = await fetch("https://discord.com/api/users/@me", {
                 headers: { Authorization: "Bearer " + token }
             });
             const profile = await res.json();
+            console.log("4" + profile)
             g_runtime.globalVars.Username = profile.global_name || profile.username;
             g_runtime.callFunction("OnLogin");
         }

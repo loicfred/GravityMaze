@@ -159,7 +159,7 @@
 					"sid": 693080282838730,
 					"parameters": {
 						"audio-file": {
-							"path": "Music/Level_2"
+							"path": "Music/Levels"
 						},
 						"loop": "looping",
 						"volume": "0",
@@ -168,7 +168,85 @@
 					}
 				}
 			],
-			"sid": 566649244692645
+			"sid": 566649244692645,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "RotatingBar",
+							"sid": 713148388360810,
+							"parameters": {
+								"instance-variable": "PairID",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "RotatingBarPivot",
+							"sid": 503615710855110,
+							"parameters": {
+								"instance-variable": "PairID",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-revolute-joint",
+							"objectClass": "RotatingBar",
+							"sid": 631218472300058,
+							"behaviorType": "Physics",
+							"parameters": {
+								"this-image-point": "0",
+								"object": "RotatingBarPivot"
+							}
+						}
+					],
+					"sid": 720292459352503
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "RotatingBar",
+							"sid": 862243637062830,
+							"parameters": {
+								"instance-variable": "PairID",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "RotatingBarPivot",
+							"sid": 334336918641685,
+							"parameters": {
+								"instance-variable": "PairID",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-revolute-joint",
+							"objectClass": "RotatingBar",
+							"sid": 608579564485965,
+							"behaviorType": "Physics",
+							"parameters": {
+								"this-image-point": "0",
+								"object": "RotatingBarPivot"
+							}
+						}
+					],
+					"sid": 579564498140979
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -730,14 +808,6 @@
 							}
 						},
 						{
-							"id": "set-visible",
-							"objectClass": "WinText",
-							"sid": 410949652260498,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
 							"id": "show-interstitial",
 							"objectClass": "MobileAdvert",
 							"sid": 506691104842667
@@ -782,6 +852,34 @@
 						}
 					],
 					"sid": 952230526781132
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "ImpulsePusher",
+							"sid": 195101656740697,
+							"parameters": {
+								"object": "PlayerBall"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "apply-impulse-towards-position",
+							"objectClass": "PlayerBall",
+							"sid": 848030014027584,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse": "10",
+								"x": "-PlayerBall.x",
+								"y": "-PlayerBall.Y",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 107350091828065
 				},
 				{
 					"eventType": "block",
@@ -838,6 +936,28 @@
 						}
 					],
 					"sid": 897652635618132
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 922554242087866
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angular-velocity",
+							"objectClass": "RotatingBar",
+							"sid": 731008661644187,
+							"behaviorType": "Physics",
+							"parameters": {
+								"angular-velocity": "90"
+							}
+						}
+					],
+					"sid": 851034994814255
 				}
 			]
 		},
@@ -961,142 +1081,6 @@
 					"sid": 366283089018982
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 160261238874592
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "RotatingBar",
-					"sid": 545403479959653,
-					"parameters": {
-						"instance-variable": "PairID",
-						"comparison": 0,
-						"value": "1"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "RotatingBarPivot",
-					"sid": 976872561466357,
-					"parameters": {
-						"instance-variable": "PairID",
-						"comparison": 0,
-						"value": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "create-revolute-joint",
-					"objectClass": "RotatingBar",
-					"sid": 281733169045559,
-					"behaviorType": "Physics",
-					"parameters": {
-						"this-image-point": "0",
-						"object": "RotatingBarPivot"
-					}
-				}
-			],
-			"sid": 874179955106070
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 202753080596544
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "RotatingBar",
-					"sid": 896968900689011,
-					"parameters": {
-						"instance-variable": "PairID",
-						"comparison": 0,
-						"value": "2"
-					}
-				},
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "RotatingBarPivot",
-					"sid": 311162584064034,
-					"parameters": {
-						"instance-variable": "PairID",
-						"comparison": 0,
-						"value": "2"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "create-revolute-joint",
-					"objectClass": "RotatingBar",
-					"sid": 731605920494249,
-					"behaviorType": "Physics",
-					"parameters": {
-						"this-image-point": "0",
-						"object": "RotatingBarPivot"
-					}
-				}
-			],
-			"sid": 331954622927361
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 556453222459371
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angular-velocity",
-					"objectClass": "RotatingBar",
-					"sid": 207889510244427,
-					"behaviorType": "Physics",
-					"parameters": {
-						"angular-velocity": "90"
-					}
-				}
-			],
-			"sid": 284750462908952
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "ImpulsePusher",
-					"sid": 328439243471881,
-					"parameters": {
-						"object": "PlayerBall"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "apply-impulse-towards-position",
-					"objectClass": "PlayerBall",
-					"sid": 116056098893748,
-					"behaviorType": "Physics",
-					"parameters": {
-						"impulse": "10",
-						"x": "-PlayerBall.x",
-						"y": "-PlayerBall.Y",
-						"image-point": "0"
-					}
-				}
-			],
-			"sid": 481634139387818
 		},
 		{
 			"eventType": "block",

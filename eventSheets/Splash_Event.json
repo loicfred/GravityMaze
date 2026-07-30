@@ -48,7 +48,7 @@
 			"actions": [
 				{
 					"id": "get-item",
-					"objectClass": "Localstorage",
+					"objectClass": "LocalStorage",
 					"sid": 878334586915101,
 					"parameters": {
 						"key": "\"Force\""
@@ -56,34 +56,10 @@
 				},
 				{
 					"id": "get-item",
-					"objectClass": "Localstorage",
+					"objectClass": "LocalStorage",
 					"sid": 990003430415524,
 					"parameters": {
 						"key": "\"Volume\""
-					}
-				},
-				{
-					"id": "get-item",
-					"objectClass": "Localstorage",
-					"sid": 461115517072194,
-					"parameters": {
-						"key": "\"Level1Complete\""
-					}
-				},
-				{
-					"id": "get-item",
-					"objectClass": "Localstorage",
-					"sid": 986212768374123,
-					"parameters": {
-						"key": "\"Level2Complete\""
-					}
-				},
-				{
-					"id": "get-item",
-					"objectClass": "Localstorage",
-					"sid": 676732918946428,
-					"parameters": {
-						"key": "\"Level3Complete\""
 					}
 				}
 			],
@@ -157,7 +133,7 @@
 			"conditions": [
 				{
 					"id": "on-any-item-get",
-					"objectClass": "Localstorage",
+					"objectClass": "LocalStorage",
 					"sid": 360421698627470
 				}
 			],
@@ -169,7 +145,7 @@
 					"conditions": [
 						{
 							"id": "compare-key",
-							"objectClass": "Localstorage",
+							"objectClass": "LocalStorage",
 							"sid": 140611400763863,
 							"parameters": {
 								"comparison": 0,
@@ -211,7 +187,7 @@
 					"conditions": [
 						{
 							"id": "compare-key",
-							"objectClass": "Localstorage",
+							"objectClass": "LocalStorage",
 							"sid": 551558878382145,
 							"parameters": {
 								"comparison": 0,

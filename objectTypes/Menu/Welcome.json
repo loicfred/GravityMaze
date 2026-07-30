@@ -1,7 +1,7 @@
 {
-	"name": "WinText",
+	"name": "Welcome",
 	"plugin-id": "Text",
-	"sid": 921721259547508,
+	"sid": 149842860390771,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
