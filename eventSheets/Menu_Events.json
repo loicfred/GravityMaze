@@ -82,20 +82,6 @@
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Control_Audio",
-					"sid": 367196189001388,
-					"parameters": {
-						"audio-file": {
-							"path": "Music/Mainmenu"
-						},
-						"loop": "looping",
-						"volume": "0",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
 					"id": "set-value",
 					"objectClass": "Volume",
 					"sid": 770107280754122,
@@ -112,7 +98,40 @@
 					}
 				}
 			],
-			"sid": 563224285361274
+			"sid": 563224285361274,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-tag-playing",
+							"objectClass": "Control_Audio",
+							"sid": 157067920058963,
+							"parameters": {
+								"tag": "\"main_menu\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Control_Audio",
+							"sid": 236534069003320,
+							"parameters": {
+								"audio-file": {
+									"path": "Music/Mainmenu"
+								},
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"main_menu\""
+							}
+						}
+					],
+					"sid": 572002272039106
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1082,24 +1101,6 @@
 					]
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-end-of-layout",
-					"objectClass": "System",
-					"sid": 261776226085829
-				}
-			],
-			"actions": [
-				{
-					"id": "stop-all",
-					"objectClass": "Control_Audio",
-					"sid": 649097201905631
-				}
-			],
-			"sid": 684276820218872
 		},
 		{
 			"functionName": "OnLogin",

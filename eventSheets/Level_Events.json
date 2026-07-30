@@ -110,6 +110,11 @@
 					}
 				},
 				{
+					"id": "stop-all",
+					"objectClass": "Control_Audio",
+					"sid": 832711240269759
+				},
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
 					"sid": 767487277281148,
