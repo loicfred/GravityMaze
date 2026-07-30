@@ -170,14 +170,6 @@
 							"parameters": {
 								"db": "-50 + (Volume = 0 ? -100 : Volume)"
 							}
-						},
-						{
-							"id": "set-value",
-							"objectClass": "Volume",
-							"sid": 487991118562622,
-							"parameters": {
-								"value": "max(0, min(Volume, 100))"
-							}
 						}
 					],
 					"sid": 433661948524907
@@ -199,18 +191,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 271011076962451,
+							"sid": 978132906494025,
 							"parameters": {
 								"variable": "ForceMultiplier",
-								"value": "max(0, min(int(Localstorage.ItemValue), 100))"
-							}
-						},
-						{
-							"id": "set-value",
-							"objectClass": "Force",
-							"sid": 452858992213890,
-							"parameters": {
-								"value": "max(0, min(ForceMultiplier * 100, 100))"
+								"value": "max(0, min(int(Localstorage.ItemValue), 100)) / 100"
 							}
 						}
 					],

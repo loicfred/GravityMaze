@@ -92,7 +92,7 @@
 				{
 					"id": "set-value",
 					"objectClass": "Force",
-					"sid": 687138889023917,
+					"sid": 723318459576086,
 					"parameters": {
 						"value": "ForceMultiplier * 100"
 					}
@@ -288,7 +288,7 @@
 				{
 					"id": "set-item",
 					"objectClass": "LocalStorage",
-					"sid": 348655652595911,
+					"sid": 509117626174150,
 					"parameters": {
 						"key": "\"Volume\"",
 						"value": "Volume.Value"
@@ -331,7 +331,7 @@
 				{
 					"id": "set-item",
 					"objectClass": "LocalStorage",
-					"sid": 274793182589453,
+					"sid": 274183029727914,
 					"parameters": {
 						"key": "\"Force\"",
 						"value": "Force.Value"
@@ -340,10 +340,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 339335739522018,
+					"sid": 695943743112169,
 					"parameters": {
 						"variable": "ForceMultiplier",
-						"value": "max(0, min(int(Force.Value), 100)) / 100"
+						"value": "Force.Value / 100"
 					}
 				},
 				{
