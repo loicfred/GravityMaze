@@ -5,7 +5,7 @@
 	"singleglobal-inst": {
 		"type": "MobileAdvert",
 		"properties": {
-			"test-mode": true,
+			"test-mode": false,
 			"application-id": "ca-app-pub-4929234972492255~6480615575",
 			"ios-application-id": "",
 			"debug-location": "disabled",

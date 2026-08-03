@@ -383,13 +383,13 @@
 		"subfolders": []
 	},
 	"properties": {
-		"description": "",
+		"description": "Gravity Maze",
 		"version": "1.0.0.0",
 		"autoIncrementVersion": false,
-		"author": "",
+		"author": "zayaan",
 		"authorEmail": "",
 		"authorWebsite": "",
-		"appId": "",
+		"appId": "com.zayaan.gravity",
 		"pixelRounding": false,
 		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
